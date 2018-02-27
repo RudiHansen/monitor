@@ -3,6 +3,7 @@ import csv
 import collections
 from datetime import datetime
 from datetime import timedelta
+from colorama import Fore, Back, Style
 
 CompStats = collections.namedtuple('CompStats', 'ComputerName ComputerDescription ComputerOS Location IPInternal IPExternal LastOnlineDateTime UpdateIntervalSec CPUUtilization DiskUtilization')
 
@@ -46,10 +47,12 @@ for computer in computer_list:
     lastOnlineDataTime     = computer.LastOnlineDateTime + timedelta(seconds=computer.UpdateIntervalSec)
     lastOnlineDataTimeLong = computer.LastOnlineDateTime + timedelta(seconds=computer.UpdateIntervalSec*5)
     
-    if(dateTimeNow > lastOnlineDataTime):
-        print 'Warning';
-    elif(dateTimeNow > lastOnlineDataTimeLong):
-        print 'error'
+    if(dateTimeNow > lastOnlineDataTimeLong):
+	outString = Back.RED + '{0:<15}'.format(computer.ComputerName) + Back.RESET
+    elif(dateTimeNow > lastOnlineDataTime):
+	outString = Back.YELLOW + '{0:<15}'.format(computer.ComputerName) + Back.RESET
+    else:
+	outString = Back.GREEN + '{0:<15}'.format(computer.ComputerName) + Back.RESET
         
-    outString = '{0:<15} {1:20} {2:5} {3:5}'.format(computer.ComputerName,str(computer.LastOnlineDateTime),str(computer.CPUUtilization),str(computer.DiskUtilization))
+    outString += ' {0:20} {1:5} {2:5}'.format(str(computer.LastOnlineDateTime),str(computer.CPUUtilization),str(computer.DiskUtilization))
     print outString
