@@ -7,6 +7,8 @@ from datetime import timedelta
 from colorama import Fore, Back, Style
 import os
 import time
+import urwid
+
 
 CompStats = collections.namedtuple('CompStats', 'ComputerName ComputerDescription ComputerOS Location IPInternal IPExternal LastOnlineDateTime UpdateIntervalSec CPUUtilization DiskUtilization')
 
@@ -32,9 +34,11 @@ def loadCompStatsFromCsv( fileName ):
     return computer_list
     
 def printCompStats( computer_list):
+    outputTxt = '';
+    
     dateTimeNow = datetime.now()
     outString = '{0:<15} {1:20} {2:5} {3:5}'.format('ComputerName','LastOnlineDateTime','CPU','Disk')
-    print outString
+    outputTxt += outString + '\n'
     for computer in computer_list:
         lastOnlineDateTime     = computer.LastOnlineDateTime + timedelta(seconds=computer.UpdateIntervalSec)
         lastOnlineDateTimeLong = computer.LastOnlineDateTime + timedelta(seconds=computer.UpdateIntervalSec*2)
@@ -67,10 +71,17 @@ def printCompStats( computer_list):
             DiskUtilization = Back.GREEN + '{0:5}'.format(str(computer.DiskUtilization)) + Back.RESET
         
         outString = '{0:<15} {1:20} {2:5} {3:5}'.format(ComputerName,LastOnlineDateTime,CPUUtilization,DiskUtilization)
-        print outString
+        outputTxt += outString + '\n'
+        
+    return outputTxt;
 
-while (1):
-    os.system('cls' if os.name == 'nt' else 'clear')
-    computer_list = loadCompStatsFromCsv('compstats.csv')    
-    printCompStats(computer_list)
-    time.sleep(5)
+#while (1):
+os.system('cls' if os.name == 'nt' else 'clear')
+computer_list   = loadCompStatsFromCsv('compstats.csv')    
+outputTxt       = printCompStats(computer_list)
+#outputTxt       = "Test"
+txt             = urwid.Text(outputTxt)
+fill            = urwid.Filler(txt, 'top')
+loop            = urwid.MainLoop(fill)
+loop.run()
+time.sleep(5)
