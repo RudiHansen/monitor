@@ -3,8 +3,7 @@ Planned functionality
 General:
 
 Computer Status:
-    Make output to terminal use urwid.
-
+	Repeated reading of CompStats, and output
 
 Changlog.
 
@@ -22,7 +21,8 @@ Changlog.
                     INT         DiskUtilization
             Write compstats.csv file with test data.
             Read ComputerStatus from csv file and print to terminal
-           
+			Make output to terminal use urwid.
+      
            
            
            

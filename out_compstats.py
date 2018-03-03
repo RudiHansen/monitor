@@ -34,46 +34,65 @@ def loadCompStatsFromCsv( fileName ):
     return computer_list
     
 def printCompStats( computer_list):
-    outputTxt = '';
+    red_bg = urwid.AttrSpec('default', 'dark red')
+    green_bg = urwid.AttrSpec('default', 'dark green')
+    yellow_bg = urwid.AttrSpec('black', 'yellow')
     
+    colLen_ComputerName         = 15
+    colLen_LastOnlineDateTime   = 20
+    colLen_CPUUtilization       = 5
+    colLen_DiskUtilization      = 5
+
     dateTimeNow = datetime.now()
-    outString = '{0:<15} {1:20} {2:5} {3:5}'.format('ComputerName','LastOnlineDateTime','CPU','Disk')
-    outputTxt += outString + '\n'
+    col1Str     = 'Computer name'.ljust(colLen_ComputerName)[:colLen_ComputerName]
+    col2Str     = 'Last online'.ljust(colLen_LastOnlineDateTime)[:colLen_LastOnlineDateTime]
+    col3Str     = 'CPU'.ljust(colLen_CPUUtilization)[:colLen_CPUUtilization]
+    col4Str     = 'Disk'.ljust(colLen_DiskUtilization)[:colLen_DiskUtilization]
+    outString   = [col1Str,col2Str,col3Str,col4Str+'\n']
+    
+	
     for computer in computer_list:
         lastOnlineDateTime     = computer.LastOnlineDateTime + timedelta(seconds=computer.UpdateIntervalSec)
         lastOnlineDateTimeLong = computer.LastOnlineDateTime + timedelta(seconds=computer.UpdateIntervalSec*2)
     
+        col1Str     = computer.ComputerName.ljust(colLen_ComputerName)[:colLen_ComputerName]
+        col2Str     = str(computer.LastOnlineDateTime).ljust(colLen_LastOnlineDateTime)[:colLen_LastOnlineDateTime]
+        col3Str     = str(computer.CPUUtilization).ljust(colLen_CPUUtilization)[:colLen_CPUUtilization]
+        col4Str     = str(computer.DiskUtilization).ljust(colLen_DiskUtilization)[:colLen_DiskUtilization] + '\n'
+
         # Set Colors on ComputerName && LastOnlineDateTime
         if(dateTimeNow > lastOnlineDateTimeLong):
-            ComputerName        = Back.RED + '{0:<15}'.format(computer.ComputerName) + Back.RESET
-            LastOnlineDateTime  = Back.RED + '{0:20}'.format(str(computer.LastOnlineDateTime)) + Back.RESET
+            col1    = (red_bg, col1Str)
+            col2    = (red_bg, col2Str)
         elif(dateTimeNow > lastOnlineDateTime):
-            ComputerName        = Back.YELLOW + '{0:<15}'.format(computer.ComputerName) + Back.RESET
-            LastOnlineDateTime  = Back.YELLOW + '{0:20}'.format(str(computer.LastOnlineDateTime)) + Back.RESET
+            col1    = (yellow_bg, col1Str)
+            col2    = (yellow_bg, col2Str)
         else:
-            ComputerName        = Back.GREEN + '{0:<15}'.format(computer.ComputerName) + Back.RESET
-            LastOnlineDateTime  = Back.GREEN + '{0:20}'.format(str(computer.LastOnlineDateTime)) + Back.RESET
+            col1    = (green_bg, col1Str)
+            col2    = (green_bg, col2Str)
         
         # Set Colors on CPUUtilization
         if(computer.CPUUtilization >= 90):
-            CPUUtilization = Back.RED + '{0:5}'.format(str(computer.CPUUtilization)) + Back.RESET
+            col3    = (red_bg, col3Str)
         elif(computer.CPUUtilization >= 80):
-            CPUUtilization = Back.YELLOW + '{0:5}'.format(str(computer.CPUUtilization)) + Back.RESET
+            col3    = (yellow_bg, col3Str)
         else:
-            CPUUtilization = Back.GREEN + '{0:5}'.format(str(computer.CPUUtilization)) + Back.RESET
+            col3    = (green_bg, col3Str)
 
         # Set Colors on DiskUtilization
         if(computer.DiskUtilization >= 90):
-            DiskUtilization = Back.RED + '{0:5}'.format(str(computer.DiskUtilization)) + Back.RESET
+            col4    = (red_bg, col4Str)
         elif(computer.DiskUtilization >= 80):
-            DiskUtilization = Back.YELLOW + '{0:5}'.format(str(computer.DiskUtilization)) + Back.RESET
+            col4    = (yellow_bg, col4Str)
         else:
-            DiskUtilization = Back.GREEN + '{0:5}'.format(str(computer.DiskUtilization)) + Back.RESET
+            col4    = (green_bg, col4Str)
         
-        outString = '{0:<15} {1:20} {2:5} {3:5}'.format(ComputerName,LastOnlineDateTime,CPUUtilization,DiskUtilization)
-        outputTxt += outString + '\n'
+        outString.append(col1)
+        outString.append(col2)
+        outString.append(col3)
+        outString.append(col4)
         
-    return outputTxt;
+    return outString;
 
 #while (1):
 os.system('cls' if os.name == 'nt' else 'clear')
