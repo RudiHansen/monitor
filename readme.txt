@@ -4,6 +4,7 @@ General:
 
 Computer Status:
 	Repeated reading of CompStats, and output
+	
 
 Changlog.
 
@@ -22,9 +23,7 @@ Changlog.
             Write compstats.csv file with test data.
             Read ComputerStatus from csv file and print to terminal
 			Make output to terminal use urwid.
-      
-           
-           
-           
+			Add keyboard handling for q to quit
 
+			
 THANKS TO : 

@@ -12,6 +12,10 @@ import urwid
 
 CompStats = collections.namedtuple('CompStats', 'ComputerName ComputerDescription ComputerOS Location IPInternal IPExternal LastOnlineDateTime UpdateIntervalSec CPUUtilization DiskUtilization')
 
+def unhandled_input(key):
+    if key == 'q':
+        raise urwid.ExitMainLoop()
+
 def loadCompStatsFromCsv( fileName ):
     with open(fileName, 'rb') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=';', quotechar='"')
@@ -48,7 +52,7 @@ def printCompStats( computer_list):
     col2Str     = 'Last online'.ljust(colLen_LastOnlineDateTime)[:colLen_LastOnlineDateTime]
     col3Str     = 'CPU'.ljust(colLen_CPUUtilization)[:colLen_CPUUtilization]
     col4Str     = 'Disk'.ljust(colLen_DiskUtilization)[:colLen_DiskUtilization]
-    outString   = [col1Str,col2Str,col3Str,col4Str+'\n']
+    outList     = [col1Str,col2Str,col3Str,col4Str+'\n']
     
 	
     for computer in computer_list:
@@ -87,20 +91,19 @@ def printCompStats( computer_list):
         else:
             col4    = (green_bg, col4Str)
         
-        outString.append(col1)
-        outString.append(col2)
-        outString.append(col3)
-        outString.append(col4)
+        outList.append(col1)
+        outList.append(col2)
+        outList.append(col3)
+        outList.append(col4)
         
-    return outString;
+    return outList;
 
 #while (1):
-os.system('cls' if os.name == 'nt' else 'clear')
+#os.system('cls' if os.name == 'nt' else 'clear')
 computer_list   = loadCompStatsFromCsv('compstats.csv')    
-outputTxt       = printCompStats(computer_list)
-#outputTxt       = "Test"
-txt             = urwid.Text(outputTxt)
+outputList       = printCompStats(computer_list)
+txt             = urwid.Text(outputList)
 fill            = urwid.Filler(txt, 'top')
-loop            = urwid.MainLoop(fill)
+loop            = urwid.MainLoop(fill, unhandled_input=unhandled_input)
 loop.run()
 time.sleep(5)
