@@ -8,6 +8,11 @@ Computer Status:
 		Get data from .weechat/logs/irc.labitat.\#labitat.weechatlog
 	Add Event lines to output
 		Get data from csv file
+        Define namedtuple for EventLines data (EventLines)
+            Field in namedtuple are:
+                DateTime        DateTime
+                STR             SenderName
+                STR             EventText
 	Change source of data from csv files to SQL.
 		Find out what SQL database to use for data.
 		Test Create database
@@ -32,6 +37,7 @@ Changlog.
             Read ComputerStatus from csv file and print to terminal
 			Make output to terminal use urwid.
 			Add keyboard handling for q to quit
+            Write eventlines.csv file with test data
 
 			
 THANKS TO : 
