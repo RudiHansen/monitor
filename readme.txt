@@ -3,7 +3,7 @@ Planned functionality
 General:
 
 Computer Status:
-	Add ircchat lines to output 
+	Add ircchat lines to output
 		Get data from .weechat/logs/irc.labitat.\#labitat.weechatlog
 	Add Event lines to output
 		Get data from csv file
