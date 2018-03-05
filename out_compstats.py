@@ -9,13 +9,19 @@ import os
 import time
 import urwid
 
-
 CompStats = collections.namedtuple('CompStats', 'ComputerName ComputerDescription ComputerOS Location IPInternal IPExternal LastOnlineDateTime UpdateIntervalSec CPUUtilization DiskUtilization')
 
 def unhandled_input(key):
     if key == 'q':
         raise urwid.ExitMainLoop()
 
+def refresh(_loop,_data):
+    computer_list    = loadCompStatsFromCsv('compstats.csv')    
+    outputList       = printCompStats(computer_list)
+
+    txt.set_text(outputList)
+    loop.set_alarm_in(5,refresh)
+        
 def loadCompStatsFromCsv( fileName ):
     with open(fileName, 'rb') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=';', quotechar='"')
@@ -98,12 +104,10 @@ def printCompStats( computer_list):
         
     return outList;
 
-#while (1):
-#os.system('cls' if os.name == 'nt' else 'clear')
 computer_list   = loadCompStatsFromCsv('compstats.csv')    
-outputList       = printCompStats(computer_list)
+outputList      = printCompStats(computer_list)
 txt             = urwid.Text(outputList)
 fill            = urwid.Filler(txt, 'top')
 loop            = urwid.MainLoop(fill, unhandled_input=unhandled_input)
+loop.set_alarm_in(5,refresh)
 loop.run()
-time.sleep(5)

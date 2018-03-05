@@ -3,7 +3,6 @@ Planned functionality
 General:
 
 Computer Status:
-	Repeated reading of CompStats, and output
 	Add ircchat lines to output
 		Get data from .weechat/logs/irc.labitat.\#labitat.weechatlog
 	Add Event lines to output
@@ -38,6 +37,6 @@ Changlog.
 			Make output to terminal use urwid.
 			Add keyboard handling for q to quit
             Write eventlines.csv file with test data
-
+            Repeated reading of CompStats, and output
 			
 THANKS TO : 
