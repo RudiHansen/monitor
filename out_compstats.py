@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # coding=utf-8
+import monitor_func
 import csv
 import collections
 from datetime import datetime
@@ -8,7 +9,10 @@ from colorama import Fore, Back, Style
 import os
 import time
 import urwid
+import logging
 
+logging.basicConfig(filename='out_compstats.log',level=logging.DEBUG)
+refreshTime = 1
 CompStats = collections.namedtuple('CompStats', 'ComputerName ComputerDescription ComputerOS Location IPInternal IPExternal LastOnlineDateTime UpdateIntervalSec CPUUtilization DiskUtilization')
 
 def unhandled_input(key):
@@ -18,9 +22,10 @@ def unhandled_input(key):
 def refresh(_loop,_data):
     computer_list    = loadCompStatsFromCsv('compstats.csv')    
     outputList       = printCompStats(computer_list)
+    header_text      = makeHeaderTxt()
 
     bodytxt.set_text(outputList)
-    loop.set_alarm_in(5,refresh)
+    loop.set_alarm_in(refreshTime,refresh)
         
 def loadCompStatsFromCsv( fileName ):
     with open(fileName, 'rb') as csvfile:
@@ -44,14 +49,16 @@ def loadCompStatsFromCsv( fileName ):
     return computer_list
 
 def printCompStats( computer_list):
-    red_bg = urwid.AttrSpec('default', 'dark red')
-    green_bg = urwid.AttrSpec('default', 'dark green')
-    yellow_bg = urwid.AttrSpec('black', 'yellow')
+    red_bg      = urwid.AttrSpec('default', 'dark red')
+    green_bg    = urwid.AttrSpec('default', 'dark green')
+    yellow_bg   = urwid.AttrSpec('black', 'yellow')
     
-    colLen_ComputerName         = 15
-    colLen_LastOnlineDateTime   = 20
-    colLen_CPUUtilization       = 5
-    colLen_DiskUtilization      = 5
+    screen_cols                 = monitor_func.get_screen_cols()
+    colLenFactor                = screen_cols/10
+    colLen_ComputerName         = colLenFactor * 3  #15
+    colLen_LastOnlineDateTime   = colLenFactor * 4  #20
+    colLen_CPUUtilization       = colLenFactor * 1  #5
+    colLen_DiskUtilization      = colLenFactor * 2  #5
 
     dateTimeNow = datetime.now()
     col1Str     = 'Computer name'.ljust(colLen_ComputerName)[:colLen_ComputerName]
@@ -105,11 +112,17 @@ def printCompStats( computer_list):
     return outList;
 
 def makeHeaderTxt():
+    screen_cols = monitor_func.get_screen_cols()
+
+    txtTitle    = "Computer Status"
+    fillerLen   = screen_cols - len(txtTitle) - 10
+    txtFiller   = " ".ljust(fillerLen)[:fillerLen]
     header_text = [
-        ('title', "Computer Status"), "    ",
+        ('title', txtTitle), txtFiller,
         ('key', "Q"), " exits",
         ]
         
+    #logging.debug(header_text)
     return header_text
 
 def makePalette():
@@ -131,5 +144,5 @@ header          = urwid.AttrMap(urwid.Text(header_text), 'header')
 bodytxt         = urwid.Text(outputList)
 view            = urwid.Frame(header=header,body=urwid.Filler(bodytxt, valign='top'),focus_part='header')
 loop            = urwid.MainLoop(view, palette, unhandled_input=unhandled_input)
-loop.set_alarm_in(5,refresh)
+loop.set_alarm_in(refreshTime,refresh)
 loop.run()

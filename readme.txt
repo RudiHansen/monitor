@@ -3,7 +3,7 @@ Planned functionality
 General:
 
 Computer Status:
-	Add ircchat lines to output 
+    Add ircchat lines to output 
 		Get data from .weechat/logs/irc.labitat.\#labitat.weechatlog
 	Add Event lines to output
 		Get data from csv file
@@ -17,7 +17,7 @@ Computer Status:
 		Test Create database
 		Test Write to SQL
 		Test Read from SQL
-    Add Header to output
+    
 Changlog.
 
 1.00     : Define namedtuple for ComputerStatus data (CompStats)
@@ -38,5 +38,7 @@ Changlog.
 			Add keyboard handling for q to quit
             Write eventlines.csv file with test data
             Repeated reading of CompStats, and output
+            Add Header to output
+            Add console size checking to output
 			
 THANKS TO : 
