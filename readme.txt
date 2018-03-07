@@ -17,7 +17,7 @@ Computer Status:
 		Test Create database
 		Test Write to SQL
 		Test Read from SQL
-
+    Add Header to output
 Changlog.
 
 1.00     : Define namedtuple for ComputerStatus data (CompStats)

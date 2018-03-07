@@ -19,7 +19,7 @@ def refresh(_loop,_data):
     computer_list    = loadCompStatsFromCsv('compstats.csv')    
     outputList       = printCompStats(computer_list)
 
-    txt.set_text(outputList)
+    bodytxt.set_text(outputList)
     loop.set_alarm_in(5,refresh)
         
 def loadCompStatsFromCsv( fileName ):
@@ -42,7 +42,7 @@ def loadCompStatsFromCsv( fileName ):
                 computer_list.append(computer)
             rowcount+=1
     return computer_list
-    
+
 def printCompStats( computer_list):
     red_bg = urwid.AttrSpec('default', 'dark red')
     green_bg = urwid.AttrSpec('default', 'dark green')
@@ -104,10 +104,32 @@ def printCompStats( computer_list):
         
     return outList;
 
+def makeHeaderTxt():
+    header_text = [
+        ('title', "Computer Status"), "    ",
+        ('key', "Q"), " exits",
+        ]
+        
+    return header_text
+
+def makePalette():
+    palette = [
+        ('body','default','default', 'standout'),
+        ('header','white','dark blue', 'bold'),
+        ('key','white', 'dark blue', 'underline'),
+        ('title', 'white', 'dark blue',),
+        ]    
+    return palette
+    
+    
 computer_list   = loadCompStatsFromCsv('compstats.csv')    
 outputList      = printCompStats(computer_list)
-txt             = urwid.Text(outputList)
-fill            = urwid.Filler(txt, 'top')
-loop            = urwid.MainLoop(fill, unhandled_input=unhandled_input)
+header_text     = makeHeaderTxt()
+palette         = makePalette()
+
+header          = urwid.AttrMap(urwid.Text(header_text), 'header')
+bodytxt         = urwid.Text(outputList)
+view            = urwid.Frame(header=header,body=urwid.Filler(bodytxt, valign='top'),focus_part='header')
+loop            = urwid.MainLoop(view, palette, unhandled_input=unhandled_input)
 loop.set_alarm_in(5,refresh)
 loop.run()
