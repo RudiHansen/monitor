@@ -1,0 +1,872 @@
+2018-02-23 17:41:01	-->	Hansen (rsh@212.237.179.231) has joined #labitat
+2018-02-23 17:41:01	--	Topic for #labitat is "Gaffatape! There, I said it.. "
+2018-02-23 17:41:01	--	Topic set by k2OS on Thu, 22 Feb 2018 23:17:25
+2018-02-23 17:41:01	--	Channel #labitat: 59 nicks (3 ops, 0 halfops, 0 voices, 56 normals)
+2018-02-23 17:41:03	--	Channel created on Fri, 24 Nov 2017 23:43:09
+2018-02-23 17:41:23	<--	RudiHansen (RudiHansen@212.237.179.231) has quit (Quit: Leaving)
+2018-02-23 17:41:29	--	irc: disconnected from server
+2018-02-23 17:41:38	-->	Hansen (rsh@212.237.179.231) has joined #labitat
+2018-02-23 17:41:38	--	Topic for #labitat is "Gaffatape! There, I said it.. "
+2018-02-23 17:41:38	--	Topic set by k2OS on Thu, 22 Feb 2018 23:17:25
+2018-02-23 17:41:38	--	Channel #labitat: 58 nicks (3 ops, 0 halfops, 0 voices, 55 normals)
+2018-02-23 17:41:40	--	Channel created on Fri, 24 Nov 2017 23:43:09
+2018-02-23 17:42:03	Hansen	Hov, den bruger det forkerte Nick
+2018-02-23 17:42:10	<--	Hansen (rsh@212.237.179.231) has left #labitat (WeeChat 1.4)
+2018-02-23 17:43:05	--	irc: disconnected from server
+2018-02-23 17:45:10	-->	RudiHansen (rsh@212.237.179.231) has joined #labitat
+2018-02-23 17:45:10	--	Topic for #labitat is "Gaffatape! There, I said it.. "
+2018-02-23 17:45:10	--	Topic set by k2OS on Thu, 22 Feb 2018 23:17:25
+2018-02-23 17:45:10	--	Channel #labitat: 58 nicks (3 ops, 0 halfops, 0 voices, 55 normals)
+2018-02-23 17:45:12	--	Channel created on Fri, 24 Nov 2017 23:43:09
+2018-02-23 17:45:16	RudiHansen	Sådan det var bedre
+2018-02-23 17:46:48	--	irc: disconnected from server
+2018-02-23 17:46:51	-->	RudiHansen (rsh@212.237.179.231) has joined #labitat
+2018-02-23 17:46:51	--	Topic for #labitat is "Gaffatape! There, I said it.. "
+2018-02-23 17:46:51	--	Topic set by k2OS on Thu, 22 Feb 2018 23:17:25
+2018-02-23 17:46:51	--	Channel #labitat: 58 nicks (3 ops, 0 halfops, 0 voices, 55 normals)
+2018-02-23 17:46:52	--	Channel created on Fri, 24 Nov 2017 23:43:09
+2018-02-23 17:49:20	-->	Hansen (RudiHansen@212.237.179.231) has joined #labitat
+2018-02-23 17:49:26	Hansen	-
+2018-02-23 17:54:16	Hansen	-
+2018-02-23 17:59:24	<--	knutz_ (knutz@82.103.140.214) has quit (Ping timeout: 183 seconds)
+2018-02-23 18:03:05	-->	Zapro (webchat@localhost) has joined #labitat
+2018-02-23 18:03:17	Zapro	Hey peeps. Sker der noget i spacet?
+2018-02-23 18:05:20	--	irc: disconnected from server
+2018-02-23 18:09:11	-->	RudiHansen (rsh@212.237.179.231) has joined #labitat
+2018-02-23 18:09:11	--	Topic for #labitat is "Gaffatape! There, I said it.. "
+2018-02-23 18:09:11	--	Topic set by k2OS on Thu, 22 Feb 2018 23:17:25
+2018-02-23 18:09:11	--	Channel #labitat: 58 nicks (3 ops, 0 halfops, 0 voices, 55 normals)
+2018-02-23 18:09:13	--	Channel created on Fri, 24 Nov 2017 23:43:09
+2018-02-23 18:09:25	Hansen	5
+2018-02-23 18:09:34	<--	Hansen (RudiHansen@212.237.179.231) has quit (Quit: Leaving)
+2018-02-23 18:10:46	JumboTron	A333333333
+2018-02-23 18:10:51	JumboTron	Zapro: ja
+2018-02-23 18:11:34	RudiHansen	Ja undskyld jeg spammede lidt
+2018-02-23 18:18:36	<--	Zapro (webchat@localhost) has quit (Ping timeout: 181 seconds)
+2018-02-23 18:23:15	krav	mosh/tmux/weechat er den viktigste stacken
+2018-02-23 18:24:16	RudiHansen	krav: mosh er det terminal klient til mobil?
+2018-02-23 18:25:26	krav	mosh er en protokoll som ssh, men over udp så den overlever at du går i suspend eller bytter ip
+2018-02-23 18:25:42	krav	det finnes mange implementasjoner til mobil
+2018-02-23 18:26:13	RudiHansen	Ahh ok smart nok
+2018-02-23 19:02:17	jesperh	mosh <3 Jeg bruger det med screen, men tmux er også populært
+2018-02-23 19:18:24	krav	om du mapper tmuxs (ubrukelige) default prefix ^B om til ^A så er den identisk
+2018-02-23 19:55:36	<--	einar (einar@einar.io) has quit (Input/output error)
+2018-02-23 20:19:41	-->	einar (einar@einar.io) has joined #labitat
+2018-02-23 20:42:16	BlackThorneDK	er der blevet lavet et ordenligt sikkerhedsaudit af mosh efterhånden?
+2018-02-23 20:42:41	BlackThorneDK	sidst jeg læste om det, var det noget med at folk 'mente' at det var sikkert nok, men at man nok burde lave et mere tilbundsgående audit
+2018-02-23 20:56:38	krav	aes-implementasjonen kommer fra openssl (som trenger mere tilbundsgående audit, men det er en annen historie), autentifikasjonsmekanismen er ssh
+2018-02-23 21:13:29	-->	acknowlli (acknowlli@cpe.xe-2-0-1-973.bynqe10.dk.customer.tdc.net) has joined #labitat
+2018-02-23 21:22:49	<--	acknowlli (acknowlli@cpe.xe-2-0-1-973.bynqe10.dk.customer.tdc.net) has quit (Quit: Leaving.)
+2018-02-23 21:23:57	RudiHansen	Jeg troede at de havde gennemchecket openssh, hvis den ikke er sikker hvad skal vi så bruge?
+2018-02-23 22:21:07	jesperh	Jeg plejer at køre mosh over openvpn. Den ene er for smidighed, den anden er for sikkerhed
+2018-02-23 22:34:35	RudiHansen	Men mosh bruger i bare det på telefon, eller også på computeren?
+2018-02-23 22:38:21	flummer	RudiHansen: jeg bruger det bare på computeren...
+2018-02-23 22:38:38	flummer	sidder ikke og chatter på min mobil... ;-)
+2018-02-23 22:39:11	RudiHansen	mosh.org ?
+2018-02-23 22:44:19	flummer	hmm... det var vist noget brew install mosh eller noget i den stil... jeg er på macOS...
+2018-02-23 22:45:03	flummer	men jo... mosh.org
+2018-02-23 22:45:28	RudiHansen	Jeg er mest på Windows, men jeg undersøger
+2018-02-23 22:45:44	flummer	på server siden er det debian i mit tilfælde, og der er det apt-get install mosh
+2018-02-23 22:46:32	flummer	hmm... hvis du har linux subsystem for windows... den der ubuntu bash... så er det sikkert lige til i den...
+2018-02-23 22:47:21	RudiHansen	Nå ja det er jo nok den nemmeste måde at få det til at køre på
+2018-02-23 22:48:54	flummer	jeg tror bare du kan køre sudo apt-get install mosh i ubuntu bash'en...
+2018-02-23 22:50:32	RudiHansen	Ja det tror jeg også, men spørgsmålet er nok om jeg har noget brug for mosh lige nu, syntes ssh virker ganske godt for mig, og er egenlig tilfreds med den måde det virker på.
+2018-02-23 22:51:02	RudiHansen	Gør mosh andet end at hjælpe med når man er på dårlige forbindelser eller roaming?
+2018-02-23 22:51:47	flummer	den reconnecter automatisk... så man ikke skal logge ind hver gang man har været offline (maskine i dvale eller lign.)
+2018-02-23 22:53:10	RudiHansen	Ja der kan jeg godt se ideen, men ret tit bruger jeg maskiner der enten altid er tændt, eller min stationære som jeg lukker helt ned.
+2018-02-23 22:53:35	flummer	så kombineret med tmux eller screen, så er det lidt som om irssi bare køre lokalt, men hele tiden, også når man ikke er på nettet og maskinen er i standby
+2018-02-23 22:53:52	RudiHansen	Men jo på min bærbare kunne jeg nok godt bruger det, og der køre jeg lige nu ubuntu, så det er jo nok nemt
+2018-02-23 22:56:41	RudiHansen	Sådan så er det installeret på den bærbare og min server :-)
+2018-02-24 07:27:40	jok	mårn
+2018-02-24 09:51:55	RudiHansen	mårn
+2018-02-24 09:52:28	BenS	Gmorn
+2018-02-24 10:08:56	JumboTron	Nirb
+2018-02-24 10:16:05	semi	morn
+2018-02-24 10:31:36	Mushbie	morn
+2018-02-24 11:06:52	RudiHansen	Kaffe, Juice, Ostemadder og Basser klar til konsumering, så er vi i gang...
+2018-02-24 11:31:09	JumboTron	Der er stadig 2 friske spandauer i spacet hvis nogen er til sen morgenmad :)
+2018-02-24 11:42:44	JumboTron	rettelse: 1
+2018-02-24 12:44:59	Mushbie	k2OS: https://vt.media.tumblr.com/tumblr_oxigk0ars81vnq1cr_480.mp4
+2018-02-24 12:52:51	semi	http://hilleroed.lokalavisen.dk/er-du-i-tvivl-det-her-giver-et-klip-i-koerekortet-/Lokale-nyheder/20180224/artikler/712319820
+2018-02-24 12:52:54	semi	Pkt. 12 på listen....
+2018-02-24 12:52:59	semi	I'm trying, dammit!
+2018-02-24 12:56:49	Patina	semi: Du prøver at køre med høj koncentration, eller hvad?
+2018-02-24 13:32:19	--	irc: disconnected from server
+2018-02-24 13:32:38	-->	RudiHansen (rsh@212.237.179.231) has joined #labitat
+2018-02-24 13:32:38	--	Topic for #labitat is "Gaffatape! There, I said it.. "
+2018-02-24 13:32:38	--	Topic set by k2OS on Thu, 22 Feb 2018 23:17:25
+2018-02-24 13:32:38	--	Channel #labitat: 56 nicks (3 ops, 0 halfops, 0 voices, 53 normals)
+2018-02-24 13:32:40	--	Channel created on Fri, 24 Nov 2017 23:43:09
+2018-02-24 14:18:31	semi	Patina: well, de antyder at det er et problem når niveauet er lavt
+2018-02-24 14:56:18	krav	RudiHansen: https://www.buzzfeed.com/chrisstokelwalker/the-internet-is-being-protected-by-two-guys-named-st
+2018-02-24 15:23:25	RudiHansen	krav: Tak meget informativt
+2018-02-24 16:41:30	@k2OS	det der med at bruge halvdelen af natten på liige at skulle gennemføre subnautica istedet for at sove, var ikke den bedste ide jeg har haft længe..
+2018-02-24 16:42:42	@k2OS	specielt ikke, når jeg skal ud og spise og så i bio når jeg har fri 'lige om lidt' og har en 12-timers mere i morgen.. zzx
+2018-02-24 16:47:56	@k2OS	Mushbie: and the circle is complete ;)
+2018-02-24 16:58:59	@k2OS	24. februar og der er nogen der griller ude på fællesgrillen.. og duften kommer nærmest direkte ind i min lejlighed... mmm :)
+2018-02-24 17:03:50	semi	hehe
+2018-02-24 17:04:01	semi	Det er godt vejr...bare en smule køligt
+2018-02-24 17:04:31	@k2OS	de er også pakket godt ind derude. jeg trir 
+2018-02-24 17:04:56	@k2OS	tror de laver ting til en fest i vores festlokale.. 
+2018-02-24 19:43:07	BenS	JumboTron: power ?
+2018-02-24 19:43:10	JumboTron	Power usage: 2179.2 W. 15 minute average: 3016.1 W
+2018-02-24 19:43:50	BenS	Wow ! Der er gang i den ;-) 
+2018-02-24 19:44:05	JumboTron	et eller andet sjovt på jumbotronen
+2018-02-24 19:44:41	BenS	T-shirts ...
+2018-02-24 19:59:05	JumboTron	Ja, der bliver designet og skåret ud :-)
+2018-02-24 20:17:17	@SiGNOUT	JumboTron: power
+2018-02-24 20:17:20	JumboTron	Power usage: 4609.5 W. 15 minute average: 3334.6 W
+2018-02-24 20:21:23	RudiHansen	JumboTron: power
+2018-02-24 20:21:26	JumboTron	Power usage: 2298.9 W. 15 minute average: 3842.4 W
+2018-02-24 20:21:36	RudiHansen	He he kan den gøre andet?
+2018-02-24 20:28:58	JumboTron	RudiHansen: Der er en forsinket svarfunktion.. Ja
+2018-02-24 20:30:36	BenS	JumboTron: ta'r du strøm på mig ?
+2018-02-24 20:30:39	JumboTron	Power usage: 1936.5 W. 15 minute average: 3178.0 W
+2018-02-24 20:51:04	-->	acknowlli (acknowlli@2a05:f6c7:1825:0:7b:9f43:7cf8:412a) has joined #labitat
+2018-02-24 21:04:13	Riiiis	acknowlli: gået godt med transporten?
+2018-02-24 21:09:10	acknowlli	Riiiis: Jep. Ikke helt færdig endnu, men vi tager resten i morgen.
+2018-02-24 21:53:27	donax	Jeg fatter ikke hvorfor Debian lissom prøver på at sylte brugerne ind i omveje, navneforandring af pakker. Jeg downloaded fra libav.org v.12.3 - configure&&make. OK.
+2018-02-24 21:53:54	donax	Jeg ved godt jeg burde læse "configure --help" men jeg er syg, og det fungerer, youtube-dl klager ikke mere.
+2018-02-24 21:54:11	donax	G'nat :)
+2018-02-24 22:42:03	<--	Xnybre (Xnybre@xnybre.dk) has quit (Quit: leaving)
+2018-02-24 23:04:54	-->	Xnybre (Xnybre@xnybre.dk) has joined #labitat
+2018-02-24 23:04:54	--	Mode #labitat [+qo Xnybre Xnybre] by ChanServ
+2018-02-25 02:23:15	flummer	semi: jeg hæftede mig nu mere ved punkt 7 og 9 på den liste, og tænker lidt på om man får to klip også bare ved en enkelt forseelse !?
+2018-02-25 03:57:02	-->	squiggy (3e6694a2@ircip2.mibbit.com) has joined #labitat
+2018-02-25 05:33:59	<--	squiggy (3e6694a2@ircip2.mibbit.com) has left #labitat
+2018-02-25 07:30:40	<--	acknowlli (acknowlli@2a05:f6c7:1825:0:7b:9f43:7cf8:412a) has quit (Quit: Leaving.)
+2018-02-25 11:37:11	semi	flummer: hæh, den så jeg ikke
+2018-02-25 11:46:15	@k2OS	morn
+2018-02-25 12:07:16	@k2OS	findes der en eller anden windows-ting der kan vise mig hvad jeg klikker på på min mus (scroll, LMB, RMB, MMB-click).. enten er Fusion defekt og gider ikke altid registrere at jeg klikker på MMB på min mus, eller også er musen defekt.. så jeg vil gerne debugge lidt visuelt først..
+2018-02-25 12:08:31	knielsen	k2OS: hvis man googler "xev for windows" kommer der ting op - måske er der noget der der kan bruges
+2018-02-25 12:13:12	@k2OS	knielsen: hm ja... en del der spørger efter windows-apps der kan det samme som xev :D Jeg fandt den har lavet en simpel JS-ting, som viser mig, at klik på button 2 (scrollhjulet) faktisk tilsyneladende ikke altid regisreres..
+2018-02-25 12:13:17	@k2OS	http://unixpapa.com/js/testmouse.html
+2018-02-25 12:20:10	@k2OS	hah ok ja.. testede lige med en anden mus, og der er ingen fejl der.. så forstår jeg bedre hvoror jeg er ved at gå amok i fusion når ting ikke virkede :D
+2018-02-25 12:35:36	@k2OS	lidt mere test viser faktisk, at alle klik/release bliver registreret af musen, men de bliver ikke afleveret 'som de sker' til pc'en fra den her ene mus.. nogen gange kommer MouseButtonDown først når man releaser knappen igen.. ah, the joy of free hardware :D
+2018-02-25 12:35:40	-->	acknowlli (acknowlli@2a05:f6c7:1825:0:e0b2:2b94:66e8:4d39) has joined #labitat
+2018-02-25 13:25:29	flummer	k2OS: det store spørgsmål nu er jo så om du skal sende musen videre i kæden og lade en anden have fornøjelsen af den også, eller om du selv skal skille den ad og bruge den som dele/sende delene til genbrug...
+2018-02-25 13:31:03	<--	acknowlli (acknowlli@2a05:f6c7:1825:0:e0b2:2b94:66e8:4d39) has quit (Quit: Leaving.)
+2018-02-25 14:00:51	-->	acknowlli (acknowlli@2a05:f6c7:1825:0:791b:bfa6:b7d1:6f91) has joined #labitat
+2018-02-25 14:03:26	@k2OS	flummer: jeg har byttet den ud med den jeg havde på min work-laptop, for der har jeg ikke brug for MMB :D
+2018-02-25 14:03:48	@k2OS	(den jeg brugte på worklaptopen er også en 'gratis fra kassen'..)
+2018-02-25 14:05:58	Esmil	Riiiis: jeg har lige forslået Bente at sende en mail til info@labitat.dk, men den er endt i min spamfolder. Så vil bare lige sikre mig at du ser den ;)
+2018-02-25 14:14:06	<--	acknowlli (acknowlli@2a05:f6c7:1825:0:791b:bfa6:b7d1:6f91) has quit (Quit: Leaving.)
+2018-02-25 14:34:23	Riiiis	jeg ser den
+2018-02-25 14:34:30	Riiiis	Esmil: ^
+2018-02-25 14:50:45	Patina	Esmil: Du må ikke forslå Bente.
+2018-02-25 15:07:55	Esmil	Riiiis: fedt
+2018-02-25 17:08:11	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-02-25 17:09:25	-->	louis_ (louis@5.103.138.205) has joined #labitat
+2018-02-25 17:10:28	-->	louis__ (louis@5.103.138.205) has joined #labitat
+2018-02-25 17:12:22	<--	louis_ (louis@5.103.138.205) has quit (Quit: louis_)
+2018-02-25 17:12:27	<--	louisdk (louis@5.103.138.205) has quit (Quit: louisdk)
+2018-02-25 17:56:23	@k2OS	woop. så er det sørme lykkdes mig at få tegnet og printet noget ACME-gevind der passer på den her teleskopstang jeg har.. så skal selve den adapter det skal bruges i tegnes, og det skal testprintes nogen stykker.. så er spørgsmålet om 1) der kan skæres invendige ACME-gevind på vores drekebænk i spacet og 2).. om nogen måske kan bestikkes med cola eller andet til at gøre det for mig når jeg får
+2018-02-25 17:56:30	@k2OS	 lidt flere mål på den her dims.. :)
+2018-02-25 18:59:24	-->	acknowlli (acknowlli@2a01:4260:1ab:c:b543:c9ca:9b09:633d) has joined #labitat
+2018-02-25 19:32:20	<--	tomatpasser (tomatpasse@xd4ed8a0d.cust.hiper.dk) has quit (Quit: ZNC 1.6.5 - http://znc.in)
+2018-02-25 19:33:35	-->	tomatpasser (tomatpasse@xd4ed8a0d.cust.hiper.dk) has joined #labitat
+2018-02-25 19:39:15	Mushbie	https://www.youtube.com/watch?v=HluANRwPyNo
+2018-02-25 19:45:58	Riiiis	k2OS: jeg tror ikke vi har denslags jern/holder, der skal til for at lave indvendige gevind på drejebænken
+2018-02-25 19:57:15	@k2OS	Riiiis: som jeg også lige har kunne google mig til, så er det vist også nærmest noget folk laver selv (jernene altså)
+2018-02-25 19:57:25	RudiHansen	Mushbie: :-D
+2018-02-25 20:02:00	@SiGNOUT	Hvor stor diameter kan metaldrejebænken tage?
+2018-02-25 20:02:03	Patina	Riiiis k2OS: Det hedder en borestang og det har vi ganske rigtigt ikke.
+2018-02-25 20:05:53	Mushbie	SiGNOUT: måske står det her https://wiki.nottinghack.org.uk/images/e/e8/Myford_Super7_Lathe.pdf
+2018-02-25 20:07:59	@SiGNOUT	Mushbie: 89mm raduis. tak :)
+2018-02-25 20:08:06	Mushbie	np
+2018-02-25 20:19:02	BenS	RudiHansen: https://en.m.wikipedia.org/wiki/Nagios siger, at Nagios er free :-?
+2018-02-25 20:23:56	RudiHansen	BenS: Ja men på deres egen side, https://www.nagios.org/ kunne jeg ikke lige finde en gratis version
+2018-02-25 20:24:14	RudiHansen	Men det er også ok har fået sat Observium up, det var ret nemt
+2018-02-25 20:24:32	BenS	K
+2018-02-25 20:26:09	RudiHansen	Men når det kommer til stykket er de begge to lidt noget andet end det jeg gerne vil ha, så laver nok noget selv.
+2018-02-25 20:28:13	semi	Der er også statsd, men det er mere til performancemonitorering
+2018-02-25 20:33:00	RudiHansen	Jo men jeg kom frem til at jeg egenlig sagtens kunne lave det selv, så får jeg det også som jeg vil have det.
+2018-02-25 20:33:28	RudiHansen	Skal bare lige have fundet den rigtige måde at skrive til terminalen på den rigtige måde.
+2018-02-25 20:34:22	RudiHansen	Ind til videre har jeg fundet curses til python, som nok kan bruges
+2018-02-25 20:35:30	@SiGNOUT	RudiHansen: Det er ikke ligefrem fordi de prøver at holde det hemmeligt ...
+2018-02-25 20:36:09	RudiHansen	SiGNOUT: Holde hvad hemligt
+2018-02-25 20:36:53	@SiGNOUT	hvor man henter nagios. Der er stort set kun download links på indexsiden
+2018-02-25 20:37:14	@SiGNOUT	De 4 kæmpestore øverst er open source versionen 
+2018-02-25 20:38:39	RudiHansen	SiGNOUT: Ahh jeg havde kikket på de andre hvor der stod Free Download, dohh
+2018-02-25 20:39:51	krav	icinga er en fork av nagios som er litt penere (og litt mer fri?)
+2018-02-25 21:01:53	<--	louis__ (louis@5.103.138.205) has quit (Ping timeout: 182 seconds)
+2018-02-25 21:15:53	-->	louis__ (louis@5.103.138.205) has joined #labitat
+2018-02-25 22:12:26	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 185 seconds)
+2018-02-25 22:12:37	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-25 23:03:46	RudiHansen	-
+2018-02-25 23:12:09	RudiHansen	nat
+2018-02-25 23:27:16	<--	louis__ (louis@5.103.138.205) has quit (Ping timeout: 183 seconds)
+2018-02-26 01:04:28	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Quit: Leaving.)
+2018-02-26 02:09:21	<--	donax (donax@0x5e910009.adsl.cybercity.dk) has quit (Ping timeout: 183 seconds)
+2018-02-26 02:10:28	<--	acknowlli (acknowlli@2a01:4260:1ab:c:b543:c9ca:9b09:633d) has quit (Quit: Leaving.)
+2018-02-26 02:22:59	-->	donax (donax@port313.uc1-esp.isdn-lan.cybercity.dk) has joined #labitat
+2018-02-26 07:28:16	sparre	Godmorgen.
+2018-02-26 08:10:03	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 182 seconds)
+2018-02-26 08:10:28	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-26 08:28:52	-->	jkp (jkp@cpe.ge-5-0-8-100.vbrnqe10.dk.customer.tdc.net) has joined #labitat
+2018-02-26 08:31:15	<--	jkp (jkp@cpe.ge-5-0-8-100.vbrnqe10.dk.customer.tdc.net) has quit (Input/output error)
+2018-02-26 08:38:51	-->	jkp (jkp@193.201.205.250) has joined #labitat
+2018-02-26 09:01:10	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 181 seconds)
+2018-02-26 09:03:45	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-02-26 09:42:34	RudiHansen	morn
+2018-02-26 09:46:14	semi	morn
+2018-02-26 09:50:27	@k2OS	morb
+2018-02-26 09:50:57	@k2OS	JumboTron: strøm
+2018-02-26 09:50:59	JumboTron	Power usage: 562.1 W. 15 minute average: 493.7 W
+2018-02-26 09:57:20	@SiGNOUT	nirb
+2018-02-26 09:58:08	-->	pchero (pchero@109.70.54.56) has joined #labitat
+2018-02-26 11:47:21	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-26 11:50:28	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 185 seconds)
+2018-02-26 11:50:48	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-26 12:45:12	<--	pchero (pchero@109.70.54.56) has quit (Ping timeout: 183 seconds)
+2018-02-26 12:59:19	-->	duncan (patch@fez.tardis.ed.ac.uk) has joined #labitat
+2018-02-26 13:14:44	-->	pchero (pchero@109.70.54.56) has joined #labitat
+2018-02-26 13:15:07	<--	pchero (pchero@109.70.54.56) has quit (Quit: pchero)
+2018-02-26 13:15:11	-->	pchero (pchero@109.70.54.56) has joined #labitat
+2018-02-26 13:32:25	-->	acknowlli (acknowlli@192.38.143.154) has joined #labitat
+2018-02-26 13:43:16	christianbillp	JumboTron: strøm
+2018-02-26 13:43:19	JumboTron	Power usage: 1218.7 W. 15 minute average: 1277.4 W
+2018-02-26 13:43:34	christianbillp	Tror ikke helt jeg forstår https://power.labitat.dk/last
+2018-02-26 13:43:50	christianbillp	Den viser 3000 lige nu, men grafen og JumboTron viser ca 1200
+2018-02-26 13:45:10	christianbillp	Nevermind, har fundet ud af det
+2018-02-26 13:55:57	<--	acknowlli (acknowlli@192.38.143.154) has quit (Ping timeout: 182 seconds)
+2018-02-26 14:20:15	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 184 seconds)
+2018-02-26 14:21:31	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-26 14:37:30	@k2OS	hmm der liger en og sover i spacet..
+2018-02-26 14:37:52	@k2OS	han fik bevæget sig fra sofaen til hængekøjen da jeg begyndte at larme.. 
+2018-02-26 14:38:54	semi	Har vi en hængekøje?
+2018-02-26 14:39:58	@k2OS	velkommen til "10 tegn på at semi måske ikke kommer så tit i spacet mere... #10 : vi har en hængekøje" :)
+2018-02-26 14:40:41	@k2OS	i rum 3.. nu hvor biolabbet er fjernet (du er klar over, at rum 3 er udvidet kraftigt, ik? :) )
+2018-02-26 14:41:12	semi	jojo, jeg var der for ikke så længe siden
+2018-02-26 14:42:34	@k2OS	hmm skal vi have en 'antal dage siden semi sidst har været i spacet:"-tæller op? :D
+2018-02-26 14:43:45	semi	Det kan også være at den dér hængekøje bare ikke er så synlig
+2018-02-26 14:48:50	@k2OS	den er jo grøn, så den falder i eet med.. ehrm.. ja... 
+2018-02-26 14:49:25	@k2OS	mem jo, der er andre der har gået igennem rum 3, uden at registrere at der hang en hængekøje, og tilmed at der lå nogen i den, så .. et eller andet form for usynlighedsfelt må der være om dem
+2018-02-26 14:49:29	@k2OS	den*
+2018-02-26 14:49:34	@k2OS	nå.. jeg skal larme noget mere
+2018-02-26 14:50:18	flummer	man  kan vist også pakke hengekøjen sammen... tror ikke den hang ude da vi havde workshop i lørdags og brugte bordet...
+2018-02-26 15:19:22	RudiHansen	Er der nogen der kan lave sådan en usynligheds hængekøje mere, ville kunne være smart hvis man trænkte til en lur uden konen kunne finde en.
+2018-02-26 15:20:47	 *	semi tænker at den dunkle belysning i space hjælper en del
+2018-02-26 15:22:16	flummer	RudiHansen: hvis I har et stort bord, kan man vel hænde den mellem to ben, og så lægge dug på bordet... men du skal nok starte med at lægge dug på bordet, hvis ikke i har det normalt... og så lade der gå lidt tid, så det ikke virker mistænkeligt ;-)
+2018-02-26 15:47:45	franksemi_home	flummer: det råd lyder meget specifik.. man skulle næsten tro du har afprøvet metoden :-D
+2018-02-26 15:55:09	flummer	nope... jeg er bare løsnings orienteret, og er vant til de mest mærkelige "krav" fra kunder ;-)
+2018-02-26 16:23:38	<--	jkp (jkp@193.201.205.250) has quit (Quit: Leaving...)
+2018-02-26 16:24:36	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 180 seconds)
+2018-02-26 16:25:02	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-26 16:25:12	-->	acknowlli (acknowlli@192.38.143.154) has joined #labitat
+2018-02-26 17:02:29	<--	pchero (pchero@109.70.54.56) has quit (Input/output error)
+2018-02-26 19:23:30	Patina	Jeg forstår ikke helt at der kan være et marked for lydkort til ISA-bus.  -->  https://youtu.be/61d9xFG5aSo
+2018-02-26 19:51:22	<--	acknowlli (acknowlli@192.38.143.154) has quit (Ping timeout: 183 seconds)
+2018-02-26 22:00:43	<--	knielsen (knielsen@mail2.itpol.dk) has quit (Ping timeout: 183 seconds)
+2018-02-26 22:40:45	-->	knielsen (knielsen@mail2.itpol.dk) has joined #labitat
+2018-02-26 23:09:26	@SiGNOUT	Okay, jeg har fundet et spil jeg bare SKAL prøve...
+2018-02-26 23:09:32	@SiGNOUT	https://www.youtube.com/watch?v=_nW9k6k1I3k
+2018-02-26 23:15:44	@SiGNOUT	https://www.youtube.com/watch?v=5qILiSE5UfY er nok et bedre review .)
+2018-02-26 23:41:03	@k2OS	SiGNOUT: 1 minut inde, og jeg har allerede besluttet, at det _ikke_ er noget for mig.. heh
+2018-02-26 23:42:11	@k2OS	2 minutter inde, og jeg havde tyret min telefon i jorden
+2018-02-26 23:44:55	Mushbie	SiGNOUT: ahh that game. har du set "I wanna be the Boshi"? det er lavet af en dansker der går under navnet "solgryn"
+2018-02-27 00:19:05	@SiGNOUT	Mushbie: Det springer jeg over :)
+2018-02-27 08:15:57	-->	jkp (jkp@193.201.205.250) has joined #labitat
+2018-02-27 08:26:28	BenS	G'morn 
+2018-02-27 08:26:49	RudiHansen	Godmorgen
+2018-02-27 09:28:23	<--	Mushbie (den@x1-6-e8-94-f6-ae-0e-bd.cpe.webspeed.dk) has quit (Ping timeout: 184 seconds)
+2018-02-27 09:29:35	-->	Mushbie (den@x1-6-e8-94-f6-ae-0e-bd.cpe.webspeed.dk) has joined #labitat
+2018-02-27 09:36:58	-->	pchero (pchero@109.70.54.56) has joined #labitat
+2018-02-27 09:49:24	@SiGNOUT	nirb
+2018-02-27 09:51:30	jok	nårb
+2018-02-27 09:51:38	 *	jok sender godzilla efter SiGNOUT 
+2018-02-27 09:53:00	@SiGNOUT	Er de ikke nok han hærger i Japan?
+2018-02-27 09:54:31	jok	han har i hvert fald vækket mig en gang ind til videre
+2018-02-27 10:28:35	RudiHansen	Nirb definition "Someone who performs exceedingly well at the beginning of a course, but fails to continue to do well" or "a really hot short girl"
+2018-02-27 11:18:00	@SiGNOUT	RudiHansen: eller off-by-one når man skriver morn
+2018-02-27 11:27:50	@k2OS	morn
+2018-02-27 11:28:35	@k2OS	.. hvordan mon det vil se ud på andre layouts end qwerty? :)
+2018-02-27 11:43:00	-->	acknowlli (acknowlli@192.38.143.154) has joined #labitat
+2018-02-27 11:52:52	BlackThorneDK	k2OS: for ikke at nævne varianten, hvor man faktisk rammer 'morn', men ejeren af maskinen har været så flink at køre dvorak layout
+2018-02-27 12:07:05	Esmil	msol
+2018-02-27 12:07:30	Esmil	Det er når man skriver "morn", men nogen har været så flinke at sætte ens keyboard til qwerty
+2018-02-27 12:21:18	@k2OS	msol.. MarsSol - "god morgen"-hilsen på Mars :D
+2018-02-27 12:22:21	@SiGNOUT	Er der nogen der er opdateret på almindelige moderne PC hardware? Specifikt hvor stor performanceforskel der er på DDR3l/DDR4 og DDR4 CL14 eller f.eks. CL17
+2018-02-27 12:22:36	@SiGNOUT	Der er jo tusind mange cache på en moderne i3/5/7
+2018-02-27 12:37:44	netravnen	Skulle næsten bo i sverige blot for at få --> https://www.bahnhof.se/press/press-releases/2018/02/21/bahnhof-lanserar-10-000-mbit-s-till-privatpersoner-for-298-kr-man
+2018-02-27 12:38:45	mikjaer	SiGNOUT: så vidt jeg er inde i sagerne så er det ikke noget du mærker med mindre du laver virkelig tunge ting, såsom gaming, rendering el. lign.
+2018-02-27 12:40:13	mikjaer	netravnen: min første tanke er at det er overdrevet. Men på den anden side set ... elværket har også et par hundrede ampere mere tilgængelig i masten end jeg har brug for, elnettet i mit hus er altså flaskehalsen, så den model kan man vel også bruge med internet :)
+2018-02-27 12:40:46	@SiGNOUT	Det er nogenlunde CPU-tunge ting. Mest password-crack :)
+2018-02-27 12:41:07	mikjaer	Gør man ikke det med grafikkort nu til dags?
+2018-02-27 12:41:37	@SiGNOUT	Jo. Men CPUen kan ikke fodre mine GPUer hurtigt nok, så der er en ny på vej og i den forbindelse kommer der DDR4 support :)
+2018-02-27 12:41:45	mikjaer	oh :)
+2018-02-27 12:42:01	mikjaer	Så skifter du vel også motherboard?
+2018-02-27 12:42:12	mikjaer	Eller er de pin-kombatible?
+2018-02-27 12:42:31	@SiGNOUT	Motherboard er det samme
+2018-02-27 12:42:44	@SiGNOUT	Begge CPUer er 1151
+2018-02-27 12:42:50	RudiHansen	netravnen: 10000Mbit/s, mener da jeg boede i NV havde jeg 512Mbit/s for 60 kr/mån, så her snakker vi 4 gange billigere/ 20 gange hurtiger. Hit take my money
+2018-02-27 12:42:52	mikjaer	Der kan man bare se hvor lidt jeg følger med :-/
+2018-02-27 12:44:08	@SiGNOUT	Altså da jeg var ung sad jeg med 300/75
+2018-02-27 12:44:31	@SiGNOUT	Bit per sekund. Uden prefiks.
+2018-02-27 12:45:15	@SiGNOUT	Til gengæld kostede det kun 70 øre pr minut, så man kunne overføre MEGET store programmer for nogle få kroner
+2018-02-27 12:46:43	RudiHansen	SiGNOUT: Ahh du er fra den tid hvor vi gik til arbejde i 5 meter høje snedriver i 40 graders varme, OG DET VAR MANGE PENGE DENGANG
+2018-02-27 12:46:53	RudiHansen	:-D
+2018-02-27 12:47:31	netravnen	RudiHansen: hvis du er frisk på lynhurtig internet kan gigabit leverer 5000/5000 mbit/s for 15993 kr. (inkl oprettelse) for 6 mnd og derefter 499 pr mnd. Skide billigt, ik ?
+2018-02-27 12:47:33	@SiGNOUT	Nej, vejret var ikke meget værre end det er nu, men jeg er ikke overrasket over at IT bliver hurtigere
+2018-02-27 12:48:43	@SiGNOUT	netravnen: Altså du ved jo godt at hardware og båndbredde koster penge. Hvorfor er det du insisterer på urealistiske forbindelser til foræringepriser?
+2018-02-27 12:49:10	RudiHansen	SiGNOUT: Heller ikke overrasket som sådan, men derfor kan man godt undre sig lidt ind i mellem :-)
+2018-02-27 12:49:57	netravnen	dette her er jo næsten foræring for switch med 16x SFP+ porte http://www.pricerunner.dk/pl/167-4230888/Hubs-switches/Mikrotik-CRS317-1G-16S-RM-Sammenlign-Priser
+2018-02-27 12:50:37	netravnen	Og bahnhof føles som foræring. Gigabit er bare dyre.
+2018-02-27 12:55:48	colde	What? 5 gbit for 500 kr om måneden er dyrt?
+2018-02-27 12:56:38	RudiHansen	colde: Kommer vel an på hvem/hvor man er
+2018-02-27 12:58:07	<--	acknowlli (acknowlli@192.38.143.154) has quit (Quit: Leaving.)
+2018-02-27 12:58:20	colde	Nej, det gør det virkelig ikke, med mindre man har en helt urealistisk idé om netværksomkostningerne. Klart, hvis forbrugerne kun bruger 100 mbit/s, så er det jo noget andet, men hvis man vil have 5 gbit, så må det vel være en f være med en forventing om at bruge det til tider
+2018-02-27 12:58:36	RudiHansen	Og man skal vel lige regne de 16.000 med ind i regnestykket også
+2018-02-27 13:00:20	RudiHansen	Men du har ret i at hvis man har brug for 5 gbits så er det nok ikke dyrt
+2018-02-27 13:01:24	RudiHansen	Men jeg havde som sagt 500Mbits for 60 Kr/Måned før, nu betaler jeg 270,- for 50Mbits, så det syntes jeg er ret dyrt.
+2018-02-27 13:05:37	colde	Jeg giver 199,- for 250/250, det synes jeg er ganske fint. Vi kan også få 500/500 for 499,-
+2018-02-27 13:06:52	RudiHansen	:-(
+2018-02-27 13:06:56	@SiGNOUT	Jeg ved ikke hvad min linie koster, men den er 50/10 og jeg synes i er nogle forkælede møgunger
+2018-02-27 13:07:12	colde	og de 16k mistænker jeg rimelig meget er deres omkostninger ved etablering, så det har jeg det ikke specielt skidt med
+2018-02-27 13:07:23	colde	lol SiGNOUT 
+2018-02-27 13:08:17	@SiGNOUT	De har lige gravet luftledningerne i jorden ude ved os og de har ikke engang gjort sig ulejligheden at smide tomme rør med ned i hullet :(
+2018-02-27 13:08:29	@SiGNOUT	fml
+2018-02-27 13:08:36	RudiHansen	colde: Nej de er nok fair nok med de 16k
+2018-02-27 13:09:14	colde	SiGNOUT: næste gang der skal flyttes må du gå efter at finde bedre internet. Det er som regel bare ikke så højt på listen over krav til nye boliger
+2018-02-27 13:12:07	@SiGNOUT	Jeg spurgte møgleren om han vidste hvad for noget net man kunne få derude
+2018-02-27 13:12:20	@SiGNOUT	Svaret fra sælgeren var "Vi bruger modem"
+2018-02-27 13:12:30	semi	'møgleren' alligevel
+2018-02-27 13:12:45	@SiGNOUT	Ja. Med tryk på møg
+2018-02-27 13:14:11	@k2OS	SiGNOUT: det er jo også amager.. der er jo ikke andre end dig der bruger indernæt derude
+2018-02-27 13:14:29	christianbillp	Det er irriterende så dyrt internet skal være
+2018-02-27 13:14:50	christianbillp	Hvis man ikke bor i nærheden af Parknet
+2018-02-27 13:14:55	@k2OS	.. hvor er i unge og forvænte :)
+2018-02-27 13:15:46	semi	k2OS: du har vel arbejdet til at betale dig en gigabit
+2018-02-27 13:17:25	colde	fiberby er også en rimelig fin pris
+2018-02-27 13:17:32	colde	men ja, det er svært at slå parknet på prisen
+2018-02-27 13:48:25	Mushbie	hvis nu bare danmark ikke var et lorte land, der sælger alt sin kritiske infrastruktur....
+2018-02-27 13:49:29	 *	semi sælger Mushbie 
+2018-02-27 13:49:59	Mushbie	jeg vil argumenterer for at jeg på ingen måde er kritisk for landet.
+2018-02-27 13:55:18	semi	Alt skal væk, også ikke-kritisk infrastruktur
+2018-02-27 14:00:51	Mushbie	kan du så ikke sælge mig til sverige? de har ordenligt internet til en fornuftig pris
+2018-02-27 14:02:00	semi	Desværre, du har valget mellem en amerikansk investeringsbank eller en privatejet fond, også amerikansk
+2018-02-27 14:02:17	semi	I begge tilfælde vil de vride al værdi ud af dig før de frasælger dig styk for styk
+2018-02-27 14:03:01	Mushbie	semi: http://i0.kym-cdn.com/photos/images/newsfeed/001/256/805/59e.jpg
+2018-02-27 14:48:37	duncan	Hej, kan jeg stille et sprøgsmål pa englelsk?
+2018-02-27 14:49:38	semi	jep
+2018-02-27 14:55:09	duncan	Hej, so I've got a friend who is learning Danish, and is looking for a pen-pal/speaking partner. They're at the local university (Edinburgh) and plan to visit Denmark sometime... is there anyone that would be interested (probably someone also studying at university etc)?
+2018-02-27 15:26:25	<--	pchero (pchero@109.70.54.56) has quit (Input/output error)
+2018-02-27 15:34:52	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 183 seconds)
+2018-02-27 15:37:19	<--	jkp (jkp@193.201.205.250) has quit (Quit: Leaving...)
+2018-02-27 16:07:39	-->	louis__ (louis@5.103.138.205) has joined #labitat
+2018-02-27 16:14:52	<--	louis__ (louis@5.103.138.205) has quit (Ping timeout: 182 seconds)
+2018-02-27 16:21:30	-->	louis__ (louis@5.103.138.205) has joined #labitat
+2018-02-27 16:55:10	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-27 18:22:16	@SiGNOUT	franksemi_home: Der ligger en x61 til dig på bordet i rum2
+2018-02-27 19:19:00	<--	louis__ (louis@5.103.138.205) has quit (Ping timeout: 182 seconds)
+2018-02-27 19:23:30	-->	knutz_ (knutz@82.103.140.214) has joined #labitat
+2018-02-27 20:50:00	Riiiis	Hej JumboTron-person :-)
+2018-02-27 20:50:10	Riiiis	*vinkelyde*
+2018-02-27 21:09:35	-->	louis__ (louis@5.103.138.205) has joined #labitat
+2018-02-27 21:43:38	svuorela	hmm.. internettet fortæller at davsebamse bliver gammel i dag
+2018-02-27 21:58:22	<--	louis__ (louis@5.103.138.205) has quit (Ping timeout: 182 seconds)
+2018-02-27 22:07:29	-->	louis__ (louis@5.103.138.205) has joined #labitat
+2018-02-27 22:14:08	<--	knutz_ (knutz@82.103.140.214) has quit (Quit: Lost terminal)
+2018-02-27 22:15:48	--	k2OS has changed topic for #labitat from "Gaffatape! There, I said it.. " to "davsebamse++"
+2018-02-27 22:43:52	<--	louis__ (louis@5.103.138.205) has quit (No route to host)
+2018-02-28 02:05:53	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Quit: Leaving.)
+2018-02-28 08:08:59	semi	morn
+2018-02-28 08:26:59	-->	jkp (jkp@193.201.205.250) has joined #labitat
+2018-02-28 08:40:23	BenS	G'morn 
+2018-02-28 08:45:43	@SiGNOUT	godmorgen memcached amplification attack
+2018-02-28 08:47:21	semi	D:
+2018-02-28 08:48:11	semi	Det lyder ca. lige så snedigt som dengang Red Hats mailserver i standardkonfigurationen var et åbent SMTP relay
+2018-02-28 08:54:34	 *	BlackThorneDK havde memcached åben indtil for et par uger siden
+2018-02-28 08:54:50	BlackThorneDK	$nogen havde efterladt en server unmaintained i 4 år ...
+2018-02-28 09:23:41	<--	franksemi_home (franksemi_@x1-6-d4-ca-6d-25-ef-9a.cpe.webspeed.dk) has quit (Ping timeout: 183 seconds)
+2018-02-28 09:24:48	-->	franksemi_home (franksemi_@x1-6-d4-ca-6d-25-ef-9a.cpe.webspeed.dk) has joined #labitat
+2018-02-28 09:42:42	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-02-28 10:04:16	franksemi_home	@SiGNOUT: takker :-) Jeg når først derned lørdag aften.
+2018-02-28 10:17:33	-->	pchero (pchero@109.70.54.56) has joined #labitat
+2018-02-28 10:41:27	<--	pchero (pchero@109.70.54.56) has quit (Quit: Leaving.)
+2018-02-28 11:00:44	sparre	BlackThorneDK: Av.
+2018-02-28 11:03:18	BlackThorneDK	sparre: shit happens, når serveren bliver overdraget halvt ...
+2018-02-28 11:18:40	@k2OS	morn
+2018-02-28 13:06:18	@k2OS	hmm.. jeg har åbenbart kørt mit hjemmesystem i IDE mode .. intel ssd kan kun få opdateret firmware i ahci mode (medmindre man booter på usb eller en cd/dvd), så jeg fandt en lille guide til at skifte til ahci
+2018-02-28 13:07:16	@k2OS	.. nu sidder jeg så og kigger på 'starter windows' og en harddisk-lampe der kører for fuld smadder på ca 5. minut.. bom bom..
+2018-02-28 13:31:59	Esmil	SiGNOUT: Nu har jeg googlet og læst https://medium.com/@qratorlabs/the-memcached-amplification-attack-reaching-500-gbps-b439a7b83c98
+2018-02-28 13:32:28	Esmil	Som jeg ser det er det et rimeligt godt argument mod Debians "start servicen bare du installerer pakken"-politik
+2018-02-28 13:48:55	flummer	det her memcached... kan man bruge det i f.eks. php, uden at der er en deamon der kører? jeg syntes jeg en gang har sat noget sådan op på en server, og der er er også nogle php lib enabled, men jeg har ikke nogen deamon der lytter på nogen porte og memcached pakken er heller ikke installeret...
+2018-02-28 14:25:10	@SiGNOUT	Esmil: Enig - selv microsoft har indset det er en dårlig ide :)
+2018-02-28 14:27:56	tykling	Esmil: det har altid undret mig det der
+2018-02-28 14:28:22	tykling	sidder altid og leder efter hvad jeg skal gøre for at enable servicen og så finder jeg ud af den allerede er blevet startet, af installeren!
+2018-02-28 14:28:29	tykling	prøv lige at misforstå hvad en installer skal gøre
+2018-02-28 14:39:56	Esmil	tykling: Der er et trick: echo 'exit 101' > /usr/sbin/policy-rc.d; chmod 755 /usr/sbin/policy-rc.d
+2018-02-28 14:40:10	Esmil	..men det er ikke noget de er særligt gode til at annoncere
+2018-02-28 14:41:44	@k2OS	så klones der disc.. wrooom
+2018-02-28 16:39:36	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 186 seconds)
+2018-02-28 16:40:12	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-28 16:51:59	<--	jkp (jkp@193.201.205.250) has quit (Quit: Leaving...)
+2018-02-28 17:04:56	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 187 seconds)
+2018-02-28 17:05:37	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-28 17:45:42	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 182 seconds)
+2018-02-28 17:50:15	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-28 17:53:18	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 181 seconds)
+2018-02-28 17:55:44	-->	knutz (knutz@82.103.140.214) has joined #labitat
+2018-02-28 17:58:47	<--	knutz (knutz@82.103.140.214) has quit (Ping timeout: 183 seconds)
+2018-02-28 17:58:58	--	Mode #labitat [+b *!*knutz@82.103.140.214] by k2OS
+2018-02-28 20:03:01	<--	knielsen (knielsen@mail2.itpol.dk) has quit (Connection reset by peer)
+2018-02-28 20:03:42	-->	knielsen (knielsen@mail2.itpol.dk) has joined #labitat
+2018-02-28 20:55:04	Esmil	Nå men det var rimeligt antiklimaktisk. Jeg kørte ansible på den nye space-server, satte den op, flyttede de to netkabler over og gav den strøm. Så var der internet igen og alt virkede..
+2018-02-28 20:56:02	--	Esmil has changed topic for #labitat from "davsebamse++" to "..nu med vores egen space-server \o/"
+2018-02-28 20:56:38	Esmil	Det eneste er at sshfp recorden ikke længere passer
+2018-02-28 20:56:55	Esmil	Den rigtige løsning er vel at opdatere den, men den nemme er bare at kopiere hostkey'en over
+2018-02-28 21:51:12	@SiGNOUT	Esmil: Det kunne da sagtens have gjort i går så :)
+2018-02-28 22:08:13	BenS	Det forklarer måske hvorfor min skærm gik i sort i et minuts tid lige før, da jeg ville se min back-log ... hm
+2018-02-28 23:46:17	@k2OS	BenS: hvis du var i space, ja
+2018-03-01 00:48:38	flummer	Esmil: nice!
+2018-03-01 01:45:44	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Input/output error)
+2018-03-01 03:01:59	<--	quite (quite@gyro.lublin.se) has quit (Ping timeout: 182 seconds)
+2018-03-01 03:30:04	-->	quite (quite@gyro.lublin.se) has joined #labitat
+2018-03-01 08:04:02	RudiHansen	Nu spørger jeg så lige dumt, hvad er en space-server?
+2018-03-01 08:16:19	-->	jkp (jkp@193.201.205.250) has joined #labitat
+2018-03-01 08:50:25	RudiHansen	brb
+2018-03-01 08:50:28	--	irc: disconnected from server
+2018-03-01 08:52:16	-->	RudiHansen (rsh@212.237.179.231) has joined #labitat
+2018-03-01 08:52:16	--	Topic for #labitat is "..nu med vores egen space-server \o/"
+2018-03-01 08:52:16	--	Topic set by Esmil on Wed, 28 Feb 2018 20:56:01
+2018-03-01 08:52:16	--	Channel #labitat: 56 nicks (3 ops, 0 halfops, 0 voices, 53 normals)
+2018-03-01 08:52:18	--	Channel created on Fri, 24 Nov 2017 23:43:09
+2018-03-01 09:38:07	@SiGNOUT	RudiHansen: Det er den maskine vi har i labitat der kører gateway og dhcp og den slags
+2018-03-01 09:44:20	RudiHansen	Nå troede det var en eller anden ny spændende server type
+2018-03-01 10:00:14	~Xnybre	Vi skal da totalt have os en satellit!
+2018-03-01 10:20:21	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-03-01 10:42:47	Patina	Spaceserveren skal sendes i geostationært kredsløb så den bliver en faktuel spaceserver.
+2018-03-01 10:43:46	Patina	Space-x mener jo at kunne gøre det for 50 dollars/kg.
+2018-03-01 10:49:46	@SiGNOUT	Så hvis vi bare finder $15 ...
+2018-03-01 10:52:08	BenS	SiGNOUT: det var ikke meget. Hvilken HW benyttes ?
+2018-03-01 10:52:38	@SiGNOUT	BenS: https://www.pcengines.ch/apu2.htm
+2018-03-01 11:13:01	Esmil	Bare lige for completenes, så kører space serveren også bird{,6} for at annoncere router til de ipv{4,6} adresser vi har til spacet, radius så man kan logge på det trådløse med sit labitat login, router advertisement (tænk dhcp for ipv6), mDNS og dns server
+2018-03-01 11:15:30	@SiGNOUT	Esmil: Det hører under "og den slags" ;)
+2018-03-01 11:16:10	Esmil	jaja, men når nu folk spørger ville jeg lige lave lidt oplysning 
+2018-03-01 11:16:27	@SiGNOUT	selvfølgelig
+2018-03-01 11:17:17	@SiGNOUT	Der er også ansible repo på https://github.com/labitat/labitat-ansible hvis man er meget nysgerrig
+2018-03-01 11:20:07	RudiHansen	Lidt nysgerrig er man vel altid
+2018-03-01 11:52:45	BenS	SiGNOUT: Esmil: tak for info :-) 
+2018-03-01 12:06:26	Esmil	http://vihart.com/peace-for-triple-piano/
+2018-03-01 12:06:44	Esmil	whoah, prøv at se den der "making of" video nedenunder
+2018-03-01 12:36:42	<--	Patina (tomas@dhcp-5-186-136-175.ip.fibianet.dk) has quit (Ping timeout: 184 seconds)
+2018-03-01 12:44:26	-->	Patina (tomas@dhcp-5-186-136-175.ip.fibianet.dk) has joined #labitat
+2018-03-01 15:47:45	<--	jkp (jkp@193.201.205.250) has quit (Quit: Leaving...)
+2018-03-01 19:14:25	Riiiis	morgen
+2018-03-01 21:21:01	--	irc: disconnected from server
+2018-03-01 23:20:10	-->	RudiHansen (rsh@212.237.179.231) has joined #labitat
+2018-03-01 23:20:10	--	Channel #labitat: 40 nicks (4 ops, 0 halfops, 0 voices, 36 normals)
+2018-03-01 23:20:12	--	Channel created on Thu, 01 Mar 2018 23:14:55
+2018-03-01 23:21:31	-->	Riiiis (pbk1111@5.103.128.119) has joined #labitat
+2018-03-01 23:21:43	--	Riiiis has changed topic for #labitat to "Aaaand we're back"
+2018-03-01 23:23:46	-->	Deltadk (Deltadk@xd93dd81c.cust.hiper.dk) has joined #labitat
+2018-03-01 23:24:19	-->	krav (krav@nix.hackeriet.no) has joined #labitat
+2018-03-01 23:25:10	-->	franksemi_home (franksemi_@x1-6-d4-ca-6d-25-ef-9a.cpe.webspeed.dk) has joined #labitat
+2018-03-01 23:37:06	-->	cgie (cgie@giessen.io) has joined #labitat
+2018-03-01 23:38:25	-->	juul (juul@juul.io) has joined #labitat
+2018-03-01 23:55:57	--	Mode #labitat [-o apache2] by Xnybre
+2018-03-02 00:03:34	-->	rodarmor (sid210835@hathersage.irccloud.com) has joined #labitat
+2018-03-02 00:08:09	-->	wa7son (sid34617@tooting.irccloud.com) has joined #labitat
+2018-03-02 00:08:25	-->	nyerup (sid160094@ealing.irccloud.com) has joined #labitat
+2018-03-02 00:08:35	-->	jssmk (sid36928@tooting.irccloud.com) has joined #labitat
+2018-03-02 00:08:37	-->	colde (sid49813@stonehaven.irccloud.com) has joined #labitat
+2018-03-02 00:08:45	-->	BenS (sid97414@ealing.irccloud.com) has joined #labitat
+2018-03-02 02:04:36	BenS	21:07 Connection closed unexpectedly
+2018-03-02 02:04:59	BenS	Og hvad skete der så lige her ?
+2018-03-02 02:12:57	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Quit: Leaving.)
+2018-03-02 06:33:14	<--	Mushbie (den@x1-6-e8-94-f6-ae-0e-bd.cpe.webspeed.dk) has quit (Ping timeout: 184 seconds)
+2018-03-02 07:24:04	-->	Mushbie (den@x1-6-e8-94-f6-ae-0e-bd.cpe.webspeed.dk) has joined #labitat
+2018-03-02 07:44:37	knielsen	"Everyone has a test environment, few are lucky to have a Production environment" - hehe, den kan jeg godt lide :)
+2018-03-02 07:59:52	semi	BenS: ja, det kunne jeg også godt tænke mig at vide
+2018-03-02 08:00:19	semi	knielsen: vores testmiljø er ligesom sådan en sandsynlighedsboble der hurtigt kollapser
+2018-03-02 08:00:26	semi	...tit tester vi i staging
+2018-03-02 09:08:46	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-03-02 09:28:21	-->	netravnen (sid210972@ealing.irccloud.com) has joined #labitat
+2018-03-02 09:59:37	-->	donax (donax@port313.uc1-esp.isdn-lan.cybercity.dk) has joined #labitat
+2018-03-02 10:14:38	flummer	BenS, semi: der var vist noget med noget strøm, eller rettere mangel på samme i et hosting skab... ting der lige skulle have lidt hjælp med at virke... men Asbjørn fik det fikset...
+2018-03-02 10:22:48	@SiGNOUT	Reelt kunne irc og mail vel godt flytte ned i spacet nu hvor vi ikke bor på en DSL mere
+2018-03-02 10:28:36	Esmil	Det kunne det godt, men jeg tror næppe det bliver mere stabilt
+2018-03-02 10:29:58	@SiGNOUT	Det gør det givetvis ikke. Men det er lettere at komme til når noget den eksploderer. Uanset hvad skal den server nok bygges forfra
+2018-03-02 10:31:48	Esmil	undtagen når kælderen er oversvømmet :P
+2018-03-02 11:00:01	RudiHansen	Med de små maskiner man kan få i dag, kan vi sikkert finde en der kan sættes op under loftet, så når vandet den forhåbenlig ikke...
+2018-03-02 11:05:38	-->	jkp (jkp@193.201.205.250) has joined #labitat
+2018-03-02 12:36:39	Patina	Endnu et argument for at sende serveren i kredsløb om jorden. Der skulle være ret tørt derude.
+2018-03-02 13:14:16	sparre	Til gengæld har bits det med at skifte spontant derude, hvis man ikke passer ekstra på.
+2018-03-02 13:14:45	sparre	Men med en LEON CPU så skulle det nok kunne gå. :-)
+2018-03-02 13:51:51	<--	christianbillp (christian@vmi105783.contabo.host) has quit (Ping timeout: 183 seconds)
+2018-03-02 13:51:53	-->	christianbillp (christian@vmi105783.contabo.host) has joined #labitat
+2018-03-02 15:26:05	<--	knielsen (knielsen@mail2.itpol.dk) has quit (Connection reset by peer)
+2018-03-02 15:26:39	-->	knielsen (knielsen@mail2.itpol.dk) has joined #labitat
+2018-03-02 15:53:13	@k2OS	SÅ er jeg færdig med at lime kasser.. 
+2018-03-02 16:08:00	<--	jkp (jkp@193.201.205.250) has quit (Quit: Leaving...)
+2018-03-02 16:25:55	 *	semi har fået sit haptic halløj, så det må han vel se på i aften...
+2018-03-02 16:31:20	BenS	semi: så får vi vel et feed-back ...
+2018-03-02 16:40:07	@k2OS	[badum ching]
+2018-03-02 17:17:13	@k2OS	hmm.. jeg har 3 af de her 'skulle ellers have været smidt ud'-mus. den ene virker klik på middle-mouse ikke altid, og kan derfor ikke bruges til fusion, men er ellers ganske fin.. de to andre virker middle mouse perfekt, men nærmest uanset hvilket underlag jeg bruger dem på, så har de en tendens til at 'sitre', og nogen gange laver de totalt sporadiske manøvrer, der gør dem ret trælse at bruge til f.
+2018-03-02 17:17:19	@k2OS	eks. spil.. 
+2018-03-02 17:17:45	@k2OS	måske man burde prøve det der 'købe' en mus igen.. det er nok ca 17 år siden jeg sidst gjorde det.. :D
+2018-03-02 17:21:14	-->	jesperh_web (webchat@localhost) has joined #labitat
+2018-03-02 17:22:55	jesperh_web	Halløj. Ser ud som om ipv6 til labitat.dk ikke virker. Får "no route to host" i irssi. Pinger jeg labitat.dk, får jeg fejlmelding fra 2a03:5440:2000:2::33 (Fiberby): Destination unreachable: Address unreachable
+2018-03-02 19:56:06	-->	jesperh (jesper@2a01:79c:cebc:455d:5054:ff:fe0f:4db6) has joined #labitat
+2018-03-02 19:58:46	-->	brix (brix@ravenhill.ipv6.brixandersen.dk) has joined #labitat
+2018-03-02 20:37:57	Esmil	jesperh: mystisk. labitat.dk ligger hos dkuug så jeg ved ikke hvorfor du skulle få fiberby adresser involveret medminder du selv bruger fiberby
+2018-03-02 20:38:18	Esmil	Jeg (på min fullrate forbindelse) kan godt pinge labitat.dk på ipv6
+2018-03-02 20:38:46	Esmil	jesperh: Hvis du pinger space.labitat.dk så er fiberby involveret, men det virker også herfra
+2018-03-02 20:41:32	Esmil	space.labitat.dk kan også godt nå labitat.dk på ipv6 (gennem fiberby)
+2018-03-02 20:44:04	Riiiis	Esmil: Asbjørn havde glemt at gøre noget rigtigt i går
+2018-03-02 20:44:12	Riiiis	og har fikset det nu
+2018-03-02 20:44:36	Esmil	ah
+2018-03-02 20:46:44	jesperh	tsk tsk :) Har ikke selv Fiberby, men det ser ud som om (traceroute6) at pakker til labitat.dk routes gennem Fiberbys net, lige før det leveres til DKUUG
+2018-03-02 20:47:11	<--	jesperh_web (webchat@localhost) has quit (Quit: Page closed)
+2018-03-02 20:47:42	Riiiis	jesperh: Asbjørn siger at der er flere mulige veje
+2018-03-02 22:42:18	Riiiis	christianbillp: virker det nu=
+2018-03-02 22:42:19	Riiiis	?
+2018-03-02 22:52:53	jok	mårn
+2018-03-03 01:46:39	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Input/output error)
+2018-03-03 05:07:12	BenS	G'nat
+2018-03-03 09:15:28	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-03-03 11:01:49	<--	krav (krav@nix.hackeriet.no) has quit (Ping timeout: 182 seconds)
+2018-03-03 12:19:29	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Quit: Leaving.)
+2018-03-03 15:30:45	Riiiis	Esmil: hmm, ssh key'en på spaceserveren har ændret sig?
+2018-03-03 15:36:24	Riiiis	Er der i øvrigt nogle af jer der har en Motorola Moto G5S plus mobiltelefon?
+2018-03-03 16:09:18	Esmil	Riiiis: ja, det var det jeg snakkede om med sshfp'en der ikke længere passer. jeg har jo installeret det hele igen på vores egen space server og så har den fået ny host key
+2018-03-03 16:13:09	Riiiis	ok, det har jeg ikke hørt efter så :-)
+2018-03-03 16:13:20	Riiiis	jeg tænkte bare at du kopierede key'en med over
+2018-03-03 16:15:35	BenS	Riiiis: kan man det ? Der er vel ikke stored i klartekst, men salted ...
+2018-03-03 16:16:43	Riiiis	vi taler om RSA eller DSA eller lign key'en til openssh serveren
+2018-03-03 16:18:25	Esmil	Riiiis: nja, egentlig ville jeg opdatere sshfp recorden men så squirrel!
+2018-03-03 16:19:57	BenS	Desværre så ligger (mit) user passwd som klartekst eet eller andet sted i labitat systemet :-( 
+2018-03-03 16:20:20	BenS	Og det kan jeg ikke li' :-! 
+2018-03-03 16:20:57	Riiiis	BenS: det vi taler om nu har ikke noget med det at gøre
+2018-03-03 16:21:05	Riiiis	..og er du sikker på det er rigtigt?
+2018-03-03 16:23:19	BenS	Nej, selvfølgelig ikke. Og ja - det kom Asbjørn til at sige, da der var problemer med mit login for mange år siden. 
+2018-03-03 16:24:04	BenS	Jeg måtte lave mit pwd om !
+2018-03-03 16:24:31	Riiiis	det lyder underligt, jeg siger ikke at du ikke har ret. Men jeg troede ikke det var sådan..
+2018-03-03 16:26:21	BenS	Jeg kan genskabe 'fejlen'. Og hvordan ku han fortælle, hvad 'fejlen' var ?
+2018-03-03 16:26:28	Esmil	BenS: jeg ved ikke nok om membersystemet til at love at det ikke har passwords i klartekst, men de ligger i hvert tilfælde ikke i klartekst på space.labitat.dk
+2018-03-03 16:26:40	Esmil	knielsen ved nok bedre om membersystemet
+2018-03-03 16:27:04	BenS	Ok, nu er det osse en del år siden
+2018-03-03 16:28:32	BenS	knielsen ku heller ikke rette 'fejlen' for ca ½ år siden
+2018-03-03 16:32:01	Esmil	Riiiis: Ok, nu er sshfp recorden opdateret. Så skal man bare vente..
+2018-03-03 16:34:46	Riiiis	jeg ved ikke hvad en sshfp record er :-D
+2018-03-03 16:37:51	Esmil	Det er sådan en DNS entry, så din ssh client kan spørge DNS om et fingerprint af host keyen på den server den forsøger at forbinde til
+2018-03-03 16:38:54	Esmil	Så man undgår "trust on first use". Dvs. at man blindt stoler på at det er den rigtige server man har fået fat i første gang man forbinder, og så gemmer dens hostkey i sin .ssh/known_hosts
+2018-03-03 16:39:14	Riiiis	ok
+2018-03-03 16:39:21	Riiiis	der er mange smarte ting
+2018-03-03 16:42:27	BenS	Jeg ku godt bruge et midlertidigt ip (i en times tid) men har glemt hvordan man gør det. Nogen tips ?
+2018-03-03 16:44:56	BenS	Jeg vil gerne se noget fransk net tv - men får ikke adgang
+2018-03-03 16:45:31	Riiiis	så er det noget vpn du skal ha gang i
+2018-03-03 16:46:48	BenS	eller måske et dns skift ?
+2018-03-03 16:46:57	Riiiis	tror jeg ikke
+2018-03-03 16:47:23	Riiiis	det skal sikkert se ud som om du er i frankrig, ergo skal du ha en fransk ip adresse
+2018-03-03 16:47:56	BenS	Jep, men hvordan ?
+2018-03-03 16:48:01	Riiiis	vpn
+2018-03-03 16:48:13	BenS	K
+2018-03-03 16:49:01	Riiiis	jeg har ikke den vilde erfaring med denslags. Men med en vpn tunnel, går alt din internet trafik gennetunnellen og "kommer ud" f.eks. i Frankrig
+2018-03-03 16:49:16	Riiiis	dvs det ser ud som om du sidder i frankrig
+2018-03-03 16:50:37	BenS	Ka huske at so-ein-ding ku se dansk tv i usa via net
+2018-03-03 17:04:14	knielsen	membersystemet gemmer ikke password i klartekst i databasen
+2018-03-03 17:04:15	BenS	Riiiis: 'nettet' si'r osse vpn - så jeg må se at komme igang :-) 
+2018-03-03 17:05:27	knielsen	når man skriver sit password i en html form, så bliver det jo midlertidigt gemt i klartekst i diverse buffer i OS, browser, netværk, webserver osv., det er det, som forvirrede Ben en gang...
+2018-03-03 17:06:52	BenS	knielsen: ... Ja, men nu dæmre det, håber jeg ;-) 
+2018-03-03 17:08:26	Riiiis	knielsen: godt at få slået fast! :-)
+2018-03-03 17:15:09	knielsen	Ben's password røg vist ud i en fejlmeddelelse til ham en gang, derfor "forvirring"
+2018-03-03 17:16:45	BenS	- vist
+2018-03-03 17:18:48	knielsen	man kan muligvis se passwords i `ps` hvis man kan køre det lige når en bruger sætter/ændrer password (det står i en shell-command til noget wikimedia admin command) - det kan man jo argumentere for er uheldigt
+2018-03-03 17:19:40	Esmil	Så nu kan jeg pakke (små xz-comprimerede) squashfs'er (uden xattrs) ud \o/
+2018-03-03 17:19:54	knielsen	men der er vist ikke generel adgang til at have bruger konti på labitat.dk (og dem som har admin/root/git adgang kan jo altid få adgang til systemet)
+2018-03-03 17:20:04	knielsen	Esmil: det er for vildt! :)
+2018-03-03 17:20:45	BenS	knielsen: det ka jeg godt leve med
+2018-03-03 17:36:56	Riiiis	knielsen: kan du sådan lige huske hvilken magnetisme sensor du brugte til snurre-led-dimserne?
+2018-03-03 17:37:15	Riiiis	og måske et estimat på hvor stor magneten er?
+2018-03-03 17:37:27	knielsen	Riiiis: ja - en hall-sensor, mener du produktnummer?
+2018-03-03 17:37:31	Riiiis	ja
+2018-03-03 17:37:36	Riiiis	noget specifikt :-)
+2018-03-03 17:38:04	knielsen	Riiiis: US4881 og TLE4906L (har brugt begge to)
+2018-03-03 17:38:08	Riiiis	takker :-)
+2018-03-03 17:38:26	knielsen	Riiiis: Og magneten er en geomag, det skulle give størrelsen
+2018-03-03 17:38:38	Riiiis	hmmjaokmåske:-)
+2018-03-03 17:39:02	knielsen	Riiiis: Det er de grå der hænger sat sammen i loftet i rum4 et sted hvis du vil måle :-)
+2018-03-03 17:39:27	knielsen	Riiiis: mener den ene hall er latching - den holder 0 til den ser sydpol, så holder den 1 til den ser nordpol
+2018-03-03 17:39:37	Riiiis	ah
+2018-03-03 17:39:46	knielsen	Riiiis: Den anden giver bare signal så længe den ser magnetfelt større end <noget>
+2018-03-03 17:40:26	Riiiis	ja jeg kan ikke helt finde ud af hvilken sensitivitet jeg skal vælge.. jeg har kigget på nogle allegro chips
+2018-03-03 17:40:30	knielsen	Riiiis: Generelt er de ret følsomme uden man bruger specielle magneter - men kun korte afstande (nogle centimeter)
+2018-03-03 17:40:41	Riiiis	og der står ting med B, T og N :-D
+2018-03-03 17:40:58	knielsen	Riiiis: ja, jeg tror det er bedst at teste
+2018-03-03 17:41:01	Riiiis	ja
+2018-03-03 17:41:42	Riiiis	men der er lidt tidspres, så jeg tror jeg satser et par hundrede kroner på nogle sæt (á 7 stk) 
+2018-03-03 17:41:45	knielsen	Riiiis: du kan evt. læse de tilsvarende tal i datasheet for de to. Jeg har aldrig haft problemer med følsomheden, jeg vil tro at jeg har brugt afstand på måske 5 cm. eller noget
+2018-03-03 17:42:40	Riiiis	jeg skal potentielt ha forskellige magneter til at sidde lidt tæt.. og ville gerne kunne sense hver enkelt
+2018-03-03 17:43:01	Riiiis	det er sådan noget med fysiske begrænsninger og mekanik... :-D
+2018-03-03 17:43:08	Riiiis	Det er du jo ekspert på!
+2018-03-03 17:43:12	knielsen	Riiiis: så lyder en latching som en god ide?
+2018-03-03 17:43:22	knielsen	Riiiis: Så sætter du dem skiftevis nord/syd/nord/...
+2018-03-03 17:43:46	knielsen	Riiiis: Så slipper du for problemer med at skulle kalibrere tærskelværdi for hvor kraftigt felt skal give signal
+2018-03-03 17:44:14	knielsen	Riiiis: ellers kan du finde en analog og bare måle styrken af feltet med en adc (de to jeg skrev er digitale, 0/1)
+2018-03-03 17:44:20	Riiiis	jeg har faktisk tænkt på nogle der har faste værdier for hvornår de åbner eller lukker
+2018-03-03 17:44:36	knielsen	Riiiis: decisions, decisions :)
+2018-03-03 17:44:42	Riiiis	ja! iiiih
+2018-03-03 17:44:46	Riiiis	space i dag
+2018-03-03 17:44:47	Riiiis	?
+2018-03-03 17:44:49	Riiiis	:-)
+2018-03-03 17:45:24	knielsen	jeg kunne måske godt komme forbi senere i aften ... ?
+2018-03-03 17:46:10	Riiiis	jeg er på vej dernedad om et øjeblik, det kunne være hyggeligt
+2018-03-03 18:16:34	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-03-04 03:00:40	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Input/output error)
+2018-03-04 09:44:54	--	Patina has changed topic for #labitat from "Aaaand we're back" to "Nej hvor skal vi hygge os."
+2018-03-04 10:15:49	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-03-04 10:17:59	@k2OS	morn
+2018-03-04 12:14:01	semi	morn
+2018-03-04 12:31:54	-->	krav (krav@nix.hackeriet.no) has joined #labitat
+2018-03-04 16:21:11	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-04 16:44:40	<--	krav (krav@nix.hackeriet.no) has quit (Ping timeout: 183 seconds)
+2018-03-04 18:44:51	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 180 seconds)
+2018-03-04 20:26:10	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-04 23:35:47	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 182 seconds)
+2018-03-04 23:51:29	tykling	next level bottle rocket til næste års bornhack https://imgur.com/gallery/R5quq
+2018-03-05 01:35:48	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Quit: Leaving.)
+2018-03-05 04:00:00	<--	einar (einar@einar.io) has quit (Input/output error)
+2018-03-05 08:45:36	Patina	tykling: Hvorfor WD40? Bare fordi det skal der i alt?
+2018-03-05 08:45:52	Patina	Det er jo lightergassen (flydende) der er drivmidlet.
+2018-03-05 08:46:27	<--	Mushbie (den@x1-6-e8-94-f6-ae-0e-bd.cpe.webspeed.dk) has quit (Ping timeout: 182 seconds)
+2018-03-05 08:53:11	 *	semi var i Experimentarium i weekenden
+2018-03-05 08:53:53	semi	Jeg så et par shows imens jeg var der. Til et af dem blev der lavet en 'bombe' fremstillet af en dåse med vand og karbid i. Den gav et godt brag da den blev antændt.
+2018-03-05 09:02:42	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-03-05 09:12:47	-->	codespair (webchat@localhost) has joined #labitat
+2018-03-05 09:24:54	codespair	Hi gents! :) this is Mauro, and I was wondering if it's possible to visit your space on Wednesday 14th, perhaps after 5.30 or so
+2018-03-05 09:25:34	codespair	I'd bring 5 more people with me, too
+2018-03-05 09:35:32	@k2OS	morn
+2018-03-05 09:36:12	@k2OS	codespair: there is a good chance someone will be there at that time.. 
+2018-03-05 09:37:58	codespair	k2OS: morn! Thanks! so perhaps I should check here if someone is there, like 1h before arriving
+2018-03-05 09:38:59	flummer	codespair: sure, that will work...
+2018-03-05 09:39:29	codespair	great :)
+2018-03-05 09:39:32	flummer	you can also check https://power.labitat.dk
+2018-03-05 09:40:05	flummer	if the baseline is above something like 800W, the light is probably on and someone there...
+2018-03-05 09:41:06	dreamer	or someone left the light on? ;)
+2018-03-05 09:41:10	codespair	flummer: ha! beautiful!
+2018-03-05 09:41:52	flummer	dreamer: doesn't happen often...
+2018-03-05 09:42:29	dreamer	been having that at the hackerspace in wageningen. ever since a lot of lights and groups have been fitted with sonoff's .. the other lights are left on ..
+2018-03-05 09:42:42	dreamer	(I guess people assume that _everything_ will be turned off when the space closes)
+2018-03-05 09:44:58	flummer	yeah... all our lights are manual... and it's easy to hit the switches on your way out...
+2018-03-05 10:03:31	Riiiis	mornings
+2018-03-05 10:03:57	@k2OS	så kom den sne resten af landet har 'nydt godt af' den seneste uge
+2018-03-05 10:24:17	-->	krav (krav@nix.hackeriet.no) has joined #labitat
+2018-03-05 10:31:44	semi	Øjj, pgcli er et lækkert CLI til Postgres
+2018-03-05 10:39:55	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Quit: Leaving.)
+2018-03-05 11:34:48	<--	codespair (webchat@localhost) has quit (Ping timeout: 185 seconds)
+2018-03-05 12:20:46	--	irc: disconnected from server
+2018-03-05 12:20:57	-->	RudiHansen (rsh@212.237.179.231) has joined #labitat
+2018-03-05 12:20:57	--	Topic for #labitat is "Nej hvor skal vi hygge os."
+2018-03-05 12:20:57	--	Topic set by Patina on Sun, 04 Mar 2018 09:44:53
+2018-03-05 12:20:57	--	Channel #labitat: 53 nicks (3 ops, 0 halfops, 0 voices, 50 normals)
+2018-03-05 12:20:59	--	Channel created on Thu, 01 Mar 2018 23:14:55
+2018-03-05 13:18:37	<--	Riiiis (pbk1111@5.103.128.119) has quit (Ping timeout: 182 seconds)
+2018-03-05 13:40:26	-->	jkp (jkp@193.201.205.250) has joined #labitat
+2018-03-05 13:42:57	-->	acknowlli (acknowlli@192.38.138.5) has joined #labitat
+2018-03-05 13:43:43	semi	k2OS: politiet tweeter at et elskab i Kokkedal er blevet påkørt så der er strømafbrydelse...er du en af dem der er påvirket?
+2018-03-05 14:18:38	@k2OS	semi: mit lys virker, så nej
+2018-03-05 14:27:09	semi	Nåmen hvad så med din telefon? :D
+2018-03-05 14:27:12	semi	TDC har problemer...
+2018-03-05 14:33:42	@k2OS	telefon.. 
+2018-03-05 14:34:05	@k2OS	hmm.. mener du det der.. hvad var det nu det hed.. kobberlinie?
+2018-03-05 14:36:08	semi	Nej, mest mobil
+2018-03-05 15:15:40	-->	Mushbie (den@x1-6-e8-94-f6-ae-0e-bd.cpe.webspeed.dk) has joined #labitat
+2018-03-05 15:17:02	@k2OS	semi: ok? ingen problemer der heller
+2018-03-05 15:26:41	semi	Nåmen...så er det fint
+2018-03-05 15:55:21	<--	jkp (jkp@193.201.205.250) has quit (Quit: Leaving...)
+2018-03-05 16:15:17	-->	einar (einar@einar.io) has joined #labitat
+2018-03-05 16:57:17	Patina	Lyder lidt som om k2OS er den der har påkørt elskabet, men lyset inde i bilen virker.
+2018-03-05 17:29:45	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-05 17:40:07	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 181 seconds)
+2018-03-05 17:50:27	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-03-05 18:01:44	-->	Riiiis (pbk1111@5.103.128.119) has joined #labitat
+2018-03-05 18:03:09	<--	Riiiis (pbk1111@5.103.128.119) has quit (Quit: Riiiis)
+2018-03-05 18:20:55	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-05 18:50:57	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 181 seconds)
+2018-03-05 19:14:29	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-05 20:43:25	-->	Riiiis (webchat@localhost) has joined #labitat
+2018-03-05 22:24:00	<--	acknowlli (acknowlli@192.38.138.5) has quit (Connection reset by peer)
+2018-03-05 22:30:40	<--	Riiiis (webchat@localhost) has quit (Quit: Page closed)
+2018-03-05 23:21:43	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 180 seconds)
+2018-03-06 02:06:20	<--	jesperh (jesper@2a01:79c:cebc:455d:5054:ff:fe0f:4db6) has quit (Ping timeout: 183 seconds)
+2018-03-06 02:27:39	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Quit: Leaving.)
+2018-03-06 04:03:44	-->	jesperh (jesper@2a01:79c:cebc:455d:5054:ff:fe0f:4db6) has joined #labitat
+2018-03-06 06:33:03	semi	https://www.youtube.com/watch?v=Kpfrp-GMKKM
+2018-03-06 06:33:12	semi	SpaceX opsendelse....NU
+2018-03-06 06:34:21	semi	Ingen landing dog
+2018-03-06 06:35:36	 *	jok ligger og ser
+2018-03-06 06:38:31	semi	Der kommer ret meget fart på..
+2018-03-06 06:39:14	jok	satelitten ska jo gerne op på 36000km/t svjh
+2018-03-06 06:39:22	jok	for at holde geostationært orbit
+2018-03-06 06:39:41	semi	Well, højden er ihvertfald 36.000 km, men jeg ved ikke med hastigheden
+2018-03-06 06:40:30	semi	Hm....
+2018-03-06 06:41:19	semi	Hastigheden i kredsløbet skal være 3 km/s eller ca 11.000 km/t...men den skal vel have en masse hastighed at 'bytte' med
+2018-03-06 06:41:25	jok	ah ja
+2018-03-06 06:41:42	semi	Min erfaring fra KSP siger mig ihvertfald at når man kommer længere ud i kredsløbet går det langsommere
+2018-03-06 06:45:39	semi	Der var godt med is på vejene i Hillerød...jeg kunne godt ha' brugt mine pigdæk
+2018-03-06 06:45:49	semi	Men i det øjeblik jeg sætter dem på smelter hele molevitten vel
+2018-03-06 08:35:40	-->	jkp (jkp@193.201.205.250) has joined #labitat
+2018-03-06 09:10:20	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-03-06 09:41:48	@k2OS	morn
+2018-03-06 09:42:28	@k2OS	semi: do it!
+2018-03-06 12:49:31	-->	acknowlli (acknowlli@192.38.138.5) has joined #labitat
+2018-03-06 13:06:47	Patina	Liger der nogen 125kHz RFID-tags et sted i space?
+2018-03-06 13:07:05	Mushbie	vi havde hvist nogle fra nokia?
+2018-03-06 13:19:41	Patina	Mushbie: De der små sorte dimser?
+2018-03-06 13:20:21	@SiGNOUT	Jeg havde en kasse med 50-60 stykker nøgleringe med derned, men ved ikke hvor de er endt. Smed dem bare i limbo
+2018-03-06 13:20:39	Mushbie	Patina: yup
+2018-03-06 13:20:40	Patina	Ok
+2018-03-06 13:21:39	Patina	Jeg købte sådan en dims hvor der stod den kunne læse både 125kHz og 14MHz. Skidesmart.
+2018-03-06 13:21:54	Patina	Det kunne den selvfølgelig ikke og jeg har kun 14MHz kort.
+2018-03-06 13:22:08	Patina	Eller, det er vist 13.56MHz.
+2018-03-06 13:22:27	Mushbie	ellers kan du lave et 125khz tag med en atmega85 or en spole :p
+2018-03-06 13:23:00	acknowlli	Jeg tror de ligger i rum 2, i en lille kasse øverst i reolen med strømforsyninger oscv.
+2018-03-06 13:23:11	acknowlli	osv
+2018-03-06 13:41:26	Patina	Mushbie: Det gider jeg helt sikkert ikke. ;-)
+2018-03-06 13:42:40	JumboTron	Patina: Der står en rød kasse i spacet, hvor der står "RFID + Reader" på - jeg ser på den nu
+2018-03-06 13:44:18	Patina	JumboTron: Det behøver du ikke. Jeg ved hvad der er i kassen.
+2018-03-06 13:44:37	-->	Riiiis (webchat@localhost) has joined #labitat
+2018-03-06 13:45:32	Patina	Nu gør jeg. Var ikke klar over det var 125kHz tags, troede det var noget nokia-specifikt.
+2018-03-06 13:48:03	JumboTron	antagelser antagelser antagelser
+2018-03-06 13:49:05	<--	acknowlli (acknowlli@192.38.138.5) has quit (Connection reset by peer)
+2018-03-06 16:13:12	<--	Riiiis (webchat@localhost) has quit (Ping timeout: 185 seconds)
+2018-03-06 16:20:29	-->	Riiiis (webchat@localhost) has joined #labitat
+2018-03-06 16:44:04	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-06 17:03:31	knielsen	semi: Keplers lov siger jo, at for et kredsløb så er T**2/r**3 konstant (omløbstid og radius for kredsløb), og det er ca. 8km/s for r=7000 km, så kan man selv regne efter :-)
+2018-03-06 17:05:01	knielsen	Undvigelseshastigheden fra jordens overflade er omkring 11 km/s, og for at nå geostationært er nok lige lidt lavere
+2018-03-06 17:07:30	semi	De er vel nødt til at sætte den i et elliptisk kredsløb som krydser geostationært og så bremse op når den er der
+2018-03-06 17:12:06	knielsen	der er noget der hedder GTO for geostationary transfer orbit, det opgiver man tit raketters løfteevne i
+2018-03-06 17:13:24	knielsen	jeg ved ikke 100% hvordan det virker, men mon ikke det er ligesom et houman (sp?) orbit, et elliptisk kredsløb som lige når ud til geostationær, og så giver man lige det sidste delta-V yderst så kredsløbet bliver cirkulært
+2018-03-06 17:14:03	knielsen	jeg tror i hvert tilfælde ikke man bruger brændstof på at bremse hvis det kan undgås :-)
+2018-03-06 17:16:53	semi	Næ....Nu jeg tænker over det er det som du siger et kredsløb dder lige når ud til og så laver man et burn for at få kredsløbet cirkulært
+2018-03-06 17:18:18	knielsen	hvis man ikke starter fra ækvator skal banen også lige justeres ind så den passer med ekliptika-eller-hvad-det-nu-hedder
+2018-03-06 17:42:22	<--	jkp (jkp@193.201.205.250) has quit (Quit: Leaving...)
+2018-03-06 17:44:27	<--	Deltadk (Deltadk@xd93dd81c.cust.hiper.dk) has quit (Ping timeout: 182 seconds)
+2018-03-06 17:44:37	<--	davsebamse (davsebamse@xd4ed84b9.cust.hiper.dk) has quit (Ping timeout: 182 seconds)
+2018-03-06 17:44:46	<--	tomatpasser (tomatpasse@xd4ed8a0d.cust.hiper.dk) has quit (Ping timeout: 182 seconds)
+2018-03-06 17:50:15	-->	tomatpasser (tomatpasse@xd4ed8a0d.cust.hiper.dk) has joined #labitat
+2018-03-06 17:50:40	-->	Deltadk (Deltadk@xd93dd81c.cust.hiper.dk) has joined #labitat
+2018-03-06 17:53:29	-->	davsebamse (davsebamse@xd4ed84b9.cust.hiper.dk) has joined #labitat
+2018-03-06 18:28:51	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 183 seconds)
+2018-03-06 19:30:57	Patina	semi: https://youtu.be/_mT5CP2zkN4?t=18m50s
+2018-03-06 19:34:58	semi	Det virker kun hvis man har skivebremser
+2018-03-06 19:35:59	semi	Men jeg har engang lavet et pigdæk af et gammelt mountainbikedæk hvor jeg borede skruer ind i hver tredje knop i hver side, indefra, klippede dem tæt til dækket og beklædte indersiden med gaffa for at beskytte slangen
+2018-03-06 19:36:04	semi	Det fungerede fantastisk
+2018-03-06 19:39:05	Patina	semi: Det er typisk sådan folk gør når de skal køre bil for sjov på is.
+2018-03-06 19:39:19	Patina	Der bruger man bare bolte og møtrikker.
+2018-03-06 19:41:49	-->	Zapro (webchat@localhost) has joined #labitat
+2018-03-06 19:42:09	Zapro	Godaften. Sker der noget spændende i spacet?
+2018-03-06 19:45:52	Riiiis	Zapro: stille og roligt
+2018-03-06 19:46:38	Zapro	Riiiis: Hvem er i spacet?
+2018-03-06 19:47:43	Riiiis	alle mulige
+2018-03-06 19:48:12	Riiiis	flummer, halfdan, esmil, asbjørn, bill, kaspers, englænderne
+2018-03-06 19:51:01	<--	Riiiis (webchat@localhost) has quit (Quit: Page closed)
+2018-03-06 20:01:09	<--	einar (einar@einar.io) has quit (Input/output error)
+2018-03-06 20:34:57	-->	einar (einar@einar.io) has joined #labitat
+2018-03-06 20:36:48	-->	acknowlli (acknowlli@192.38.138.5) has joined #labitat
+2018-03-06 21:34:20	<--	acknowlli (acknowlli@192.38.138.5) has quit (Ping timeout: 182 seconds)
+2018-03-06 21:44:05	@SiGNOUT	morn
+2018-03-06 21:47:33	@SiGNOUT	flummer: http://news.bbc.co.uk/2/hi/europe/7966641.stm
+2018-03-06 22:32:35	-->	acknowlli (acknowlli@192.38.138.5) has joined #labitat
+2018-03-06 23:40:42	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-06 23:47:18	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 181 seconds)
+2018-03-06 23:56:51	<--	Zapro (webchat@localhost) has quit (Quit: Page closed)
+2018-03-07 00:40:26	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Quit: Leaving.)
+2018-03-07 01:42:23	<--	acknowlli (acknowlli@192.38.138.5) has quit (Connection reset by peer)
+2018-03-07 01:45:47	-->	acknowlli (acknowlli@192.38.138.5) has joined #labitat
+2018-03-07 02:11:54	<--	acknowlli (acknowlli@192.38.138.5) has quit (Connection reset by peer)
+2018-03-07 04:45:25	<--	davsebamse (davsebamse@xd4ed84b9.cust.hiper.dk) has quit (Ping timeout: 183 seconds)
+2018-03-07 04:45:34	<--	Deltadk (Deltadk@xd93dd81c.cust.hiper.dk) has quit (Ping timeout: 182 seconds)
+2018-03-07 04:45:43	<--	tomatpasser (tomatpasse@xd4ed8a0d.cust.hiper.dk) has quit (Ping timeout: 182 seconds)
+2018-03-07 04:51:16	-->	tomatpasser (tomatpasse@xd4ed8a0d.cust.hiper.dk) has joined #labitat
+2018-03-07 04:51:34	-->	Deltadk (Deltadk@xd93dd81c.cust.hiper.dk) has joined #labitat
+2018-03-07 04:54:17	-->	davsebamse (davsebamse@xd4ed84b9.cust.hiper.dk) has joined #labitat
+2018-03-07 05:39:34	<--	Deltadk (Deltadk@xd93dd81c.cust.hiper.dk) has quit (Ping timeout: 182 seconds)
+2018-03-07 05:40:11	<--	davsebamse (davsebamse@xd4ed84b9.cust.hiper.dk) has quit (Ping timeout: 181 seconds)
+2018-03-07 05:40:21	<--	tomatpasser (tomatpasse@xd4ed8a0d.cust.hiper.dk) has quit (Ping timeout: 182 seconds)
+2018-03-07 05:43:29	-->	davsebamse (davsebamse@xd4ed84b9.cust.hiper.dk) has joined #labitat
+2018-03-07 05:43:38	-->	Deltadk (Deltadk@xd93dd81c.cust.hiper.dk) has joined #labitat
+2018-03-07 05:44:00	-->	tomatpasser (tomatpasse@xd4ed8a0d.cust.hiper.dk) has joined #labitat
+2018-03-07 08:21:57	-->	jkp (jkp@193.201.205.250) has joined #labitat
+2018-03-07 09:10:00	RudiHansen	morn
+2018-03-07 09:23:09	BenS	Gmorn efter en mini nørde nat ;-) 
+2018-03-07 11:50:52	JumboTron	Her lugter af prut.
+2018-03-07 13:01:41	-->	Duffadash (duffadash@0189401517.0.fullrate.ninja) has joined #labitat
+2018-03-07 13:02:24	@k2OS	morn
+2018-03-07 13:06:15	-->	Riiiis (pbk1111@5.103.128.119) has joined #labitat
+2018-03-07 13:19:37	<--	Riiiis (pbk1111@5.103.128.119) has quit (Quit: Lost terminal)
+2018-03-07 13:25:12	-->	Riiiis (pbk1111@5.103.128.119) has joined #labitat
+2018-03-07 13:27:20	<--	Riiiis (pbk1111@5.103.128.119) has quit (Quit: Riiiis)
+2018-03-07 13:35:31	-->	Riiiis (pbk1111@5.103.128.119) has joined #labitat
+2018-03-07 13:46:28	christianbillp	Hey, har glemt en orange skruetrækker i kuglepens form factor
+2018-03-07 13:46:50	christianbillp	Formentlig ved loddebordet til højre. Hvis nogen ser den må i meget gerne smide den i min kasse
+2018-03-07 13:47:11	christianbillp	Det er den hvor forenden af en fjernstyret bil stikker ud
+2018-03-07 13:53:23	Riiiis	Hmm, nu har jeg fået liv i min server igen.. Men certifikatet til nginx er udløbet for to måneder siden. Det var det altså ikke for tre dage siden, da maskinen virkede sidst... Nogle der har et bud på en forklaring?
+2018-03-07 13:54:19	@SiGNOUT	Riiiis: Har du rejst med tidsmaskine ud til serveren?
+2018-03-07 13:54:53	Riiiis	tja, den der 1:1 tidsmaskine som aldrig virker i snevejr
+2018-03-07 13:59:30	Riiiis	er det teknisk muligt at der ikke er skrevet til disken de sidste 2 måneder, men kun til noget cache eller lign? Sådan at det aldrig er kommet ned på disken og reelt lagret?
+2018-03-07 14:04:53	knielsen	Riiiis: det er teknisk muligt (kernen cacher og læser ikke det skrevne tilbage fra disken så længe den har plads i ram til at cache)
+2018-03-07 14:05:27	knielsen	Riiiis: men noget burde have brokket sig i en log hvis den ikke kunne skrive til disken (hm - medmindre den heller ikke kunne skrive til loggen?)
+2018-03-07 14:06:18	knielsen	Riiiis: så måske er der en mere naturlig forklaring - du kan jo se om der ellers generelt er skrevet til kernelogs osv. op til for 3 dage siden
+2018-03-07 14:06:28	Riiiis	ja
+2018-03-07 14:07:28	JumboTron	christianbillp: Flad og stjerne med magnet?
+2018-03-07 14:07:35	JumboTron	Lækkert værktøj.
+2018-03-07 14:07:42	JumboTron	Hvor er din kasse?
+2018-03-07 14:08:33	christianbillp	JumboTron: Yep, det er den. flummer har måske flere til salg
+2018-03-07 14:08:41	christianbillp	Det er den med en bil der stikker ud
+2018-03-07 14:09:20	<--	Riiiis (pbk1111@5.103.128.119) has quit (Quit: Lost terminal)
+2018-03-07 14:11:15	JumboTron	christianbillp: Fundet
+2018-03-07 14:14:50	christianbillp	JumboTron: Fedt, tak
+2018-03-07 14:34:56	-->	Riiiis (pbk1111@5.103.128.119) has joined #labitat
+2018-03-07 14:46:51	@SiGNOUT	flummer har helt sikkert flere til salg. Og de er billige :)
+2018-03-07 14:48:47	<--	Riiiis (pbk1111@5.103.128.119) has quit (Input/output error)
+2018-03-07 14:54:04	-->	Riiiis (pbk1111@5.103.128.119) has joined #labitat
+2018-03-07 14:55:47	Riiiis	Ok spøgelserne er ude af disken igen.. Min far havde overset den rigtige systemdisk, og så var der åbenbart en backupdisk i kabinettet også (og den havde jeg så lige glemt :-))
+2018-03-07 15:21:17	<--	Riiiis (pbk1111@5.103.128.119) has quit (Input/output error)
+2018-03-07 15:43:31	-->	Riiiis (pbk1111@5.103.128.119) has joined #labitat
+2018-03-07 15:44:57	<--	jkp (jkp@193.201.205.250) has quit (Quit: Leaving...)
+2018-03-07 16:10:14	flummer	Riiiis: Arh... ok.. giver mening... men cool at den er oppe igen nu...
+2018-03-07 16:10:42	Riiiis	ja, så jeg tror det var psu'en der delvist tog motherboardet med sig i faldet
+2018-03-07 16:12:44	flummer	ok... det sker vel...
+2018-03-07 16:15:17	<--	Riiiis (pbk1111@5.103.128.119) has quit (Ping timeout: 183 seconds)
+2018-03-07 16:32:01	zendk	flummer: har du bestilt hotel ?, er der andre der har bestilt hotel, tænkte bare det kunne være smart hvis vi generelt boede på samme hotel altså ud dumme danen :p
+2018-03-07 16:37:29	flummer	zendk: du tænker på 35c3? hvis det er tilfældet, så nej... der var ikke lige noget der hvor jeg bode sidst...
+2018-03-07 16:37:47	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-07 16:37:53	zendk	jep tænker på 35c3
+2018-03-07 16:44:39	flummer	jeg var KUN på hotellet for at sove... så det eneste jeg ser som fordel ved at koordinere noget er hvis man vil dele værelse med en anden, og så koordinere med vedkommende... men ellers tror jeg bare folk skal booke hvad der passer vil ønsker om lokation og pengepung... tror ikke disse ønsker er helt ens for alle, hvilket jo er helt fint...
+2018-03-07 17:03:35	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 183 seconds)
+2018-03-07 17:08:25	-->	Riiiis (pbk1111@5.103.128.119) has joined #labitat
+2018-03-07 17:08:51	Riiiis	så skulle jeg være færdig med at hoppe af og på
+2018-03-07 17:10:52	-->	LasseBoerresen (webchat@localhost) has joined #labitat
+2018-03-07 17:17:04	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-07 17:27:41	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 182 seconds)
+2018-03-07 17:40:54	-->	Elfranne (webchat@localhost) has joined #labitat
+2018-03-07 17:43:17	Elfranne	hello
+2018-03-07 17:44:30	Elfranne	i saw on the wishlist there a request for  some MIG welding wire ... but can t find the machine in the inventory... is it still relevant ? 
+2018-03-07 17:47:24	@k2OS	hello .. and no.. we don't have proper ventilation for welding in the space.. but thanks for asking :)
+2018-03-07 17:48:18	@k2OS	and by 'no' I mean 'probably not'.. that request has been on the list for _years_ :)
+2018-03-07 17:50:22	Elfranne	so that list is probably outdated by a few years ?
+2018-03-07 17:55:01	<--	Elfranne (webchat@localhost) has quit (Quit: )
+2018-03-07 18:23:17	zendk	flummer: jeg har intet imod at betale for bekvemmelighed, hvis jeg kan få sådan at jeg er i gå afstand, så vil det være perfekt
+2018-03-07 18:37:05	<--	wa7son (sid34617@tooting.irccloud.com) has quit (Quit: )
+2018-03-07 18:44:45	flummer	zendk: tidligere år har jeg boet 20min med bil fra venue... og det fungerede sådan set også OK... jeg kørte til hotellet om natten når jeg ikke gad mere, og tilbage til venue om formiddagen... men endte selvf. med at betale lidt for parkering og jeg var alene... så jeg kørte jo bare når jeg ville... lidt sværere hvis man er flere der bor sammen og i én bil... så er der selvf. mere frihed hvis m
+2018-03-07 18:44:51	flummer	an bor tæt på...
+2018-03-07 18:46:24	flummer	selvom jeg kunne smutte over på hotellet i løbet af dagen til 34c3... så tror jeg faktisk ikke rigtigt jeg brugte det overhovedet... men jeg sparede lidt i parkering og brændstof ved at bilen bare kunne stå på en gratis plads under hele arrangementet...
+2018-03-07 18:47:28	flummer	men jeg gav vist mere end dobbelt så meget som dig og mikjaer til sammen for hotellet... så det er vel lidt en ballance man lige skal finde...
+2018-03-07 18:47:37	zendk	hvad var det hotellet du boede på hed `?
+2018-03-07 18:47:53	flummer	hmm... noget med Leipzig messe...
+2018-03-07 18:48:15	flummer	men der lå vist en 2-3 stykker lige ved siden af hinanden...
+2018-03-07 18:48:55	zendk	ja okay
+2018-03-07 18:49:05	flummer	Når jeg prøvede at søge for noget tid siden, så var der ikke nogle værelser i den periode i 2018... så andre har nok været på den også ;-)
+2018-03-07 18:49:59	flummer	jeg vil nok kun booke noget så tidligt, hvis jeg kan hoppe fra igen... så non refundable er ikke så godt... der kan jo ske ting...
+2018-03-07 19:01:29	@k2OS	det minder mig om, at jeg skal have taget stilling til transport i NZ til efteråret.. den 'lille' bil som jeg plejer, hvor jeg synes at kunne huske, at jeg ikke sover så bekvemt.. men til caa 10klik for en måned.. eller en lille campervan med god soveplads og køkken og ting med i prisen.. til 15klik for en måned.. hmm.. 
+2018-03-07 19:29:24	@k2OS	bom bom. det er lykkedes mig at få forlagt den ekstra dyse jeg i sin tid købte med til min ultimaker.. jeg har lidt issues med mine print, selv med original UM pla nu, og tænkte jeg måske ville prøve at skifte dysen + teflon-tingen, som nogen anbefaler.. 
+2018-03-07 19:29:43	@k2OS	jeg kan så godt finde dyser, der måske passer på min hotend, men ikke nogen teflonrør.. 
+2018-03-07 19:51:59	@k2OS	nå.. 3deksperten har ting.. hmm
+2018-03-07 20:10:28	 *	BenS hygger sig med k2OS småpludren O:-)
+2018-03-07 23:42:15	-->	louisdk (louis@5.103.138.205) has joined #labitat
+2018-03-07 23:50:05	<--	louisdk (louis@5.103.138.205) has quit (Ping timeout: 182 seconds)
+2018-03-08 01:58:27	<--	Duffadash (duffadash@0189401517.0.fullrate.ninja) has quit (Input/output error)
+2018-03-08 08:29:21	-->	jkp (jkp@193.201.205.250) has joined #labitat
