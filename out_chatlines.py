@@ -12,7 +12,7 @@ import urwid
 import logging
 
 logging.basicConfig(filename='out_chatlines.log',level=logging.DEBUG)
-refreshTime = 30
+refreshTime = 10
 logFileName = "/home/rsh/.weechat/logs/irc.labitat.#labitat.weechatlog"
 
 ChatLines   = collections.namedtuple('ChatLines', 'DateTime UserName ChatText')

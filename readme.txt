@@ -3,13 +3,6 @@ Planned functionality
 General:
 
 Computer Status:
-    Add ircchat lines to output 
-		Get data from .weechat/logs/irc.labitat.\#labitat.weechatlog
-        Define namedtuple for Chat Lines data (ChatLines)
-            Field in namedtuple are:
-                DateTime        DateTime
-                STR             UserName
-                STR             ChatText
         
 	Add Event lines to output
 		Get data from csv file
@@ -46,5 +39,12 @@ Changlog.
             Repeated reading of CompStats, and output
             Add Header to output
             Add console size checking to output
+            Add ircchat lines to output 
+                Get data from .weechat/logs/irc.labitat.\#labitat.weechatlog
+                Define namedtuple for Chat Lines data (ChatLines)
+                    Field in namedtuple are:
+                        DateTime        DateTime
+                        STR             UserName
+                        STR             ChatText
 			
 THANKS TO : 

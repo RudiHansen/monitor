@@ -12,7 +12,7 @@ import urwid
 import logging
 
 logging.basicConfig(filename='out_compstats.log',level=logging.DEBUG)
-refreshTime = 1
+refreshTime = 10
 CompStats = collections.namedtuple('CompStats', 'ComputerName ComputerDescription ComputerOS Location IPInternal IPExternal LastOnlineDateTime UpdateIntervalSec CPUUtilization DiskUtilization')
 
 def unhandled_input(key):
