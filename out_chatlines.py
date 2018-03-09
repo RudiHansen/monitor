@@ -11,7 +11,7 @@ import time
 import urwid
 import logging
 
-logging.basicConfig(filename='out_chatlines.log',level=logging.DEBUG)
+#logging.basicConfig(filename='out_chatlines.log',level=logging.DEBUG)
 refreshTime = 10
 logFileName = "/home/rsh/.weechat/logs/irc.labitat.#labitat.weechatlog"
 

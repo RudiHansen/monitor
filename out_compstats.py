@@ -11,7 +11,7 @@ import time
 import urwid
 import logging
 
-logging.basicConfig(filename='out_compstats.log',level=logging.DEBUG)
+#logging.basicConfig(filename='out_compstats.log',level=logging.DEBUG)
 refreshTime = 10
 CompStats = collections.namedtuple('CompStats', 'ComputerName ComputerDescription ComputerOS Location IPInternal IPExternal LastOnlineDateTime UpdateIntervalSec CPUUtilization DiskUtilization')
 
