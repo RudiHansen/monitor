@@ -35,7 +35,7 @@ def refresh(_loop,_data):
 def loadChatLinesFromFile( fileName ):
     chatLines_list = []
     with open(fileName, 'rb') as csvfile:
-        spamreader = csv.reader(csvfile, delimiter='	', quotechar='"')
+        spamreader = csv.reader(csvfile, delimiter='\t', quotechar='"')
         chatLines_list = []
         for row in spamreader:
             if(row[1] != '-->' and row[1] != '<--'):
@@ -45,6 +45,21 @@ def loadChatLinesFromFile( fileName ):
                 chatLines_list.append(computer)
     return chatLines_list
 
+def formatListToOutput(inputList,columnHeaders,columnWidth):
+    outputList = []
+    pause()
+    # Calculate column width                                          (columnWidth[x])
+    # Calculate output lines                                          (outputLineNums)
+    # Set Header for output                                           (outputList[0])
+    # Get last (outputLineNums) lines from inputList                  (inputList)
+    # Fix lenghts of fields in inputList, wordwrap field x            (inputList)
+    # Get last (outputLineNums) lines from inputList                  (inputList)
+    # Remove top lines from inputList that has no data in column x
+	
+    return outputList
+    
+    
+    
 def printCompStats( chatLines_list):
     red_bg      = urwid.AttrSpec('default', 'dark red')
     green_bg    = urwid.AttrSpec('default', 'dark green')
@@ -64,12 +79,10 @@ def printCompStats( chatLines_list):
     col2Str     = 'User name'.ljust(colLen_UserName)[:colLen_UserName]
     col3Str     = 'Text'.ljust(colLen_ChatText)[:colLen_ChatText]
     outList     = [col1Str,col2Str,col3Str+'\n']
-	
-    logging.debug(str(len(chatLines_list)))
+    
     numLines = len(chatLines_list)
     idx      = numLines - screen_rows
     chatLines_list = chatLines_list[idx:numLines]
-    logging.debug(str(len(chatLines_list)))
 
     idx             = len(chatLines_list)-1
     idxTmpOutLine   = 1
@@ -141,6 +154,11 @@ def makePalette():
     
 chatLines_list  = loadChatLinesFromFile(logFileName)    
 outputList      = printCompStats(chatLines_list)
+
+columnHeaders   = ['DateTime','User name','Text']
+columnWidth     = [20,15,0]
+outputList2     = formatListToOutput(chatLines_list,columnHeaders,columnWidth)
+
 header_text     = makeHeaderTxt()
 palette         = makePalette()
 
