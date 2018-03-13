@@ -11,7 +11,7 @@ import time
 import urwid
 import logging
 
-#logging.basicConfig(filename='out_chatlines.log',level=logging.DEBUG)
+logging.basicConfig(filename='out_chatlines.log',level=logging.DEBUG)
 refreshTime = 10
 logFileName = "/home/rsh/.weechat/logs/irc.labitat.#labitat.weechatlog"
 
@@ -39,7 +39,7 @@ def loadChatLinesFromFile( fileName ):
         chatLines_list = []
         for row in spamreader:
             if(row[1] != '-->' and row[1] != '<--'):
-                computer = ChatLines(DateTime=datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'),
+                computer = ChatLines(DateTime=row[0],
                                      UserName=row[1],
                                      ChatText=row[2])
                 chatLines_list.append(computer)
@@ -49,16 +49,25 @@ def formatListToOutput(inputList,columnHeaders,columnWidth):
     outputList = []
     
     columnWidth     = calculateColumnWidth(columnWidth)
-    outputLineNums  = 
+    outputLineNums  = calculateOutputLines()
+    outputList      = setHeader(columnWidth,['DateTime','User name','Text'])
+    inputList       = getLastLines(inputList,outputLineNums)
+    printList(inputList)
+    inputList       = fixColumnLen(inputList,columnWidth,3)
+    print "----------------------------------------"
+    printList(inputList)
     exit()
-    # Calculate output lines                                          (outputLineNums)
-    # Set Header for output                                           (outputList[0])
-    # Get last (outputLineNums) lines from inputList                  (inputList)
+
     # Fix lenghts of fields in inputList, wordwrap field x            (inputList)
     # Get last (outputLineNums) lines from inputList                  (inputList)
     # Remove top lines from inputList that has no data in column x
 	
     return outputList
+    
+def printList(inputList):
+    for line in inputList:
+        logging.debug(line)
+
     
 def calculateColumnWidth(columnWidth):
     screen_cols     = monitor_func.get_screen_cols()
@@ -75,6 +84,66 @@ def calculateColumnWidth(columnWidth):
             idx += 1
     
     return columnWidth
+    
+def calculateOutputLines():
+    return monitor_func.get_screen_rows() - 3
+
+def setHeader(columnWidth,headerText):
+    idx = 0
+    while idx < len(columnWidth):
+        headerText[idx] = headerText[idx].ljust(columnWidth[idx])[:columnWidth[idx]]
+        idx += 1
+        
+    headerText[idx-1] = headerText[idx-1] + '\n'
+    
+    return headerText
+    
+def getLastLines(inputList,getNumLines):
+    numLines    = len(inputList)
+    fromLine    = numLines - getNumLines
+    outputList  = inputList[fromLine:numLines]
+    
+    return outputList
+
+def fixColumnLen(inputList,columnWidth,wrapColNr=0):
+    outputList = []
+    idxLine    = 0
+    while(idxLine < len(inputList)):
+        outputLine = []
+        inputLine = inputList[idxLine]
+        idxColumn = 0
+        lineNum   = 1
+        while(idxColumn < len(columnWidth)):
+            columnTxt = inputLine[idxColumn]
+            if(idxColumn == wrapColNr-1):
+                while(columnTxt):
+                    if(len(columnTxt) > columnWidth[idxColumn]):
+                        thisColumnWidth = columnWidth[idxColumn]
+                        if(lineNum == 1):
+                            outputLine.append(columnTxt.ljust(thisColumnWidth)[:thisColumnWidth])
+                            outputList.append(outputLine)
+                        else:
+                            extraLine       = ['','',columnTxt.ljust(thisColumnWidth)[:thisColumnWidth]]
+                            outputList.append(extraLine)
+                        columnTxt       = columnTxt[thisColumnWidth:]
+                        lineNum += 1
+                    else:
+                        if(lineNum == 1):
+                            outputLine.append(columnTxt.ljust(thisColumnWidth)[:thisColumnWidth])
+                            outputList.append(outputLine)
+                        else:
+                            extraLine       = ['','',columnTxt.ljust(thisColumnWidth)[:thisColumnWidth]]
+                            outputList.append(extraLine)
+                        columnTxt       = columnTxt[thisColumnWidth:]
+            else:
+                outputLine.append(columnTxt.ljust(columnWidth[idxColumn])[:columnWidth[idxColumn]])
+                if(idxColumn+1 == len(columnWidth) and lineNum == 1):
+                    outputList.append(outputLine)
+            idxColumn += 1
+                
+        idxLine += 1
+        
+    return outputList
     
 def printCompStats( chatLines_list):
     red_bg      = urwid.AttrSpec('default', 'dark red')
