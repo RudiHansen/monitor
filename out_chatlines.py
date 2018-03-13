@@ -47,8 +47,10 @@ def loadChatLinesFromFile( fileName ):
 
 def formatListToOutput(inputList,columnHeaders,columnWidth):
     outputList = []
-    pause()
-    # Calculate column width                                          (columnWidth[x])
+    
+    columnWidth     = calculateColumnWidth(columnWidth)
+    outputLineNums  = 
+    exit()
     # Calculate output lines                                          (outputLineNums)
     # Set Header for output                                           (outputList[0])
     # Get last (outputLineNums) lines from inputList                  (inputList)
@@ -58,7 +60,21 @@ def formatListToOutput(inputList,columnHeaders,columnWidth):
 	
     return outputList
     
+def calculateColumnWidth(columnWidth):
+    screen_cols     = monitor_func.get_screen_cols()
+    sumColumnWidth  = sum(columnWidth)
+    listOf0         = [s for s in columnWidth if s==0]
+    columns2Calc    = len(listOf0)
+
+    if(columns2Calc):
+        remainColumnWidth   = (screen_cols - sumColumnWidth) / columns2Calc
+        idx = 0
+        while idx < len(columnWidth):
+            if(columnWidth[idx] == 0):
+                columnWidth[idx] = remainColumnWidth
+            idx += 1
     
+    return columnWidth
     
 def printCompStats( chatLines_list):
     red_bg      = urwid.AttrSpec('default', 'dark red')
