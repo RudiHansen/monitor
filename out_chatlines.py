@@ -52,23 +52,27 @@ def formatListToOutput(inputList,columnHeaders,columnWidth):
     outputLineNums  = calculateOutputLines()
     outputList      = setHeader(columnWidth,['DateTime','User name','Text'])
     inputList       = getLastLines(inputList,outputLineNums)
-    printList(inputList)
     inputList       = fixColumnLen(inputList,columnWidth,3)
-    print "----------------------------------------"
-    printList(inputList)
-    exit()
-
-    # Fix lenghts of fields in inputList, wordwrap field x            (inputList)
-    # Get last (outputLineNums) lines from inputList                  (inputList)
-    # Remove top lines from inputList that has no data in column x
+    outputList      = getLastLines(inputList,outputLineNums,True)
 	
     return outputList
     
 def printList(inputList):
-    for line in inputList:
-        logging.debug(line)
-
+    print "List length = ",len(inputList)
+    idx = 0
+    while(idx < len(inputList)-1):
+        print inputList[idx]
+        idx += 1
+    print "----------------------------------------"
     
+def printListDebug(inputList):
+    logging.debug("List length = ",len(inputList))
+    idx = 0
+    while(idx < len(inputList)-1):
+        logging.debug(inputList[idx])
+        idx += 1
+    logging.debug("----------------------------------------")
+
 def calculateColumnWidth(columnWidth):
     screen_cols     = monitor_func.get_screen_cols()
     sumColumnWidth  = sum(columnWidth)
@@ -98,11 +102,22 @@ def setHeader(columnWidth,headerText):
     
     return headerText
     
-def getLastLines(inputList,getNumLines):
+def getLastLines(inputList,getNumLines,removeFirstBlank = False):
     numLines    = len(inputList)
     fromLine    = numLines - getNumLines
     outputList  = inputList[fromLine:numLines]
     
+    if(removeFirstBlank):
+        idx = 0
+        first = True
+        while(idx <= len(outputList)-1):
+            line  = outputList[idx]
+            if(first and line[0] == ""):
+                outputList.remove(line)
+            else:
+                first = False
+            idx += 1
+        
     return outputList
 
 def fixColumnLen(inputList,columnWidth,wrapColNr=0):
@@ -117,8 +132,8 @@ def fixColumnLen(inputList,columnWidth,wrapColNr=0):
             columnTxt = inputLine[idxColumn]
             if(idxColumn == wrapColNr-1):
                 while(columnTxt):
-                    if(len(columnTxt) > columnWidth[idxColumn]):
-                        thisColumnWidth = columnWidth[idxColumn]
+                    thisColumnWidth = columnWidth[idxColumn]
+                    if(len(columnTxt) > thisColumnWidth):
                         if(lineNum == 1):
                             outputLine.append(columnTxt.ljust(thisColumnWidth)[:thisColumnWidth])
                             outputList.append(outputLine)
