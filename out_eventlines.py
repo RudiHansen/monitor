@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # coding=utf-8
 import monitor_func
+import out_functions
 import csv
 import collections
 from datetime import datetime
@@ -17,16 +18,15 @@ eventFileName = "eventlines.csv"
 
 EventLines   = collections.namedtuple('EventLines', 'DateTime SenderName EventText')
 
-def pause():
-    raw_input("Press Enter to continue...")
-
 def unhandled_input(key):
     if key == 'q':
         raise urwid.ExitMainLoop()
 
 def refresh(_loop,_data):
-    computer_list    = loadEventLinesFromFile(eventFileName)    
-    outputList       = printCompStats(computer_list)
+    eventLines_list  = loadEventLinesFromFile(eventFileName)    
+    columnHeaders   = ['DateTime','User name','Text']
+    columnWidth     = [20,15,0]
+    outputList      = formatListToOutput(eventLines_list,columnHeaders,columnWidth)
     header_text      = makeHeaderTxt()
 
     bodytxt.set_text(outputList)
@@ -38,80 +38,25 @@ def loadEventLinesFromFile( fileName ):
         spamreader = csv.reader(csvfile, delimiter=';', quotechar='"')
         eventLines_list = []
         for row in spamreader:
-            computer = EventLines(DateTime=datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S'),
-                                 SenderName=row[1],
-                                 EventText=row[2])
+            computer = EventLines(DateTime=row[0],
+                                  SenderName=row[1],
+                                  EventText=row[2])
             eventLines_list.append(computer)
     return eventLines_list
 
-def printCompStats(eventLines_list):
-    red_bg      = urwid.AttrSpec('default', 'dark red')
-    green_bg    = urwid.AttrSpec('default', 'dark green')
-    yellow_bg   = urwid.AttrSpec('black', 'yellow')
+def formatListToOutput(inputList,columnHeaders,columnWidth):
+    outputList = []
     
-    screen_rows     = monitor_func.get_screen_rows() - 3
-    screen_cols     = monitor_func.get_screen_cols()
-    #colLenFactor    = screen_cols/10
-    #colLen_DateTime = colLenFactor * 2
-    #colLen_UserName = colLenFactor * 1
-    #colLen_ChatText = colLenFactor * 4
-    colLen_DateTime     = 20
-    colLen_SenderName   = 15
-    colLen_EventText    = screen_cols - 35
-
-    col1Str     = 'DateTime'.ljust(colLen_DateTime)[:colLen_DateTime]
-    col2Str     = 'User name'.ljust(colLen_SenderName)[:colLen_SenderName]
-    col3Str     = 'Text'.ljust(colLen_EventText)[:colLen_EventText]
-    outList     = [col1Str,col2Str,col3Str+'\n']
-	
-    numLines = len(eventLines_list)
-    idx      = numLines - screen_rows
-    if(idx < 0):
-        eventLines_list = eventLines_list[idx:numLines]
-
-    idx             = len(eventLines_list)-1
-    idxTmpOutLine   = 1
-    outPutLine      = 1
-    tmpOutList      = []
-    while(outPutLine < screen_rows and idx > 0):
-        eventLine   = eventLines_list[idx]
-        dateTimeStr = str(eventLine.DateTime)
-        senderNameStr = eventLine.SenderName
-        eventTextStr = eventLine.EventText
-
-        while(eventTextStr != ''):
-            if(len(eventTextStr) > colLen_EventText):
-                col1Str = dateTimeStr.ljust(colLen_DateTime)[:colLen_DateTime]
-                col2Str = senderNameStr.ljust(colLen_SenderName)[:colLen_SenderName]
-                col3Str = eventTextStr.ljust(colLen_EventText)[:colLen_EventText] + '\n'
-                dateTimeStr = ''
-                senderNameStr = ''
-                eventTextStr = eventTextStr[colLen_EventText:]
-            else:
-                col1Str = dateTimeStr.ljust(colLen_DateTime)[:colLen_DateTime]
-                col2Str = senderNameStr.ljust(colLen_SenderName)[:colLen_SenderName]
-                col3Str = eventTextStr.ljust(colLen_EventText)[:colLen_EventText] + '\n'
-                eventTextStr = ''
-            outPutLine += 1
-        
-            tmpOutList.append([idxTmpOutLine,col1Str,col2Str,col3Str])
-        idx           -= 1
-        idxTmpOutLine += 1
+    columnWidth     = out_functions.calculateColumnWidth(columnWidth)
+    outputLineNums  = out_functions.calculateOutputLines()
+    outputList      = out_functions.setHeader(columnWidth,['DateTime','Sender name','Text'])
+    inputList       = out_functions.getLastLines(inputList,outputLineNums)
+    inputList       = out_functions.fixColumnLen(inputList,columnWidth, 2)
+    inputList       = out_functions.wordWrapColumn(inputList,columnWidth,2)
+    outputList      = out_functions.getLastLines(inputList,outputLineNums,True)
+    outputList      = out_functions.addEOL(outputList)
     
-    new_list    = []
-    numRecords  = idxTmpOutLine-1
-    tmpLen      = numRecords
-    tmpIdx      = 1
-    while(tmpIdx <= numRecords):
-        part_list   = [x for x in tmpOutList if x[0] == tmpLen]
-
-        for newLine in part_list:
-            insertLine = [newLine[1],newLine[2],newLine[3]]
-            new_list.append(insertLine)
-        tmpIdx += 1
-        tmpLen -= 1
-
-    return new_list;
+    return outputList
 
 def makeHeaderTxt():
     screen_cols = monitor_func.get_screen_cols()
@@ -136,9 +81,12 @@ def makePalette():
         ]    
     return palette
     
-    
 eventLines_list  = loadEventLinesFromFile(eventFileName)    
-outputList      = printCompStats(eventLines_list)
+
+columnHeaders   = ['DateTime','Sender name','Text']
+columnWidth     = [20,15,0]
+outputList      = formatListToOutput(eventLines_list,columnHeaders,columnWidth)
+
 header_text     = makeHeaderTxt()
 palette         = makePalette()
 

@@ -25,8 +25,11 @@ def setHeader(columnWidth,headerText):
     
 def getLastLines(inputList,getNumLines,removeFirstBlank = False):
     numLines    = len(inputList)
-    fromLine    = numLines - getNumLines
-    outputList  = inputList[fromLine:numLines]
+    if(numLines < getNumLines):
+        outputList = inputList[::]
+    else:
+        fromLine    = numLines - getNumLines
+        outputList  = inputList[fromLine:numLines]
     
     if(removeFirstBlank):
         idx = 0

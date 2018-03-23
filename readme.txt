@@ -3,26 +3,6 @@ Planned functionality
 General:
 
 Computer Status:
-    Refractor method printCompStats - formatListToOutput
-        This method must be moved to a library, so it should be able to handle
-        any list with output records, and format them correctly for output.
-        
-        Function parameters
-            List of lines to work on                                        (inputList)
-            Array with column headers                                       (columnHeaders[])
-            Array with column width, 0 = Needs to be calculated             (columnWidth[])
-        Function does this
-            Calculate column width                                          (columnWidth[x])
-            Calculate output lines                                          (outputLineNums)
-            Set Header for output                                           (outputList[0])
-            Get last (outputLineNums) lines from inputList                  (inputList)
-            Fix lenghts of fields in inputList, wordwrap field x            (inputList)
-            Get last (outputLineNums) lines from inputList                  (inputList)
-            Remove top lines from inputList that has no data in column x
-        Function returns
-            outputList
-            
-        
     Change source of data from csv files to SQL.
         Find out what SQL database to use for data.
         Test Create database
@@ -65,5 +45,23 @@ Changlog.
                         DateTime        DateTime
                         STR             SenderName
                         STR             EventText
+            Refractor method printCompStats - formatListToOutput
+                This method must be moved to a library, so it should be able to handle
+                any list with output records, and format them correctly for output.
+        
+                Function parameters
+                    List of lines to work on                                        (inputList)
+                    Array with column headers                                       (columnHeaders[])
+                    Array with column width, 0 = Needs to be calculated             (columnWidth[])
+                Function does this
+                    Calculate column width                                          (columnWidth[x])
+                    Calculate output lines                                          (outputLineNums)
+                    Set Header for output                                           (outputList[0])
+                    Get last (outputLineNums) lines from inputList                  (inputList)
+                    Fix lenghts of fields in inputList, wordwrap field x            (inputList)
+                    Get last (outputLineNums) lines from inputList                  (inputList)
+                    Remove top lines from inputList that has no data in column x
+                Function returns
+                    outputList
             
 THANKS TO : 
