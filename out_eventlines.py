@@ -4,6 +4,7 @@ import monitor_func
 import out_functions
 import csv
 import collections
+import datetime as dt
 from datetime import datetime
 from datetime import timedelta
 from colorama import Fore, Back, Style
@@ -11,6 +12,7 @@ import os
 import time
 import urwid
 import logging
+import mysql.connector
 
 #logging.basicConfig(filename='out_chatlines.log',level=logging.DEBUG)
 refreshTime = 10
@@ -23,7 +25,8 @@ def unhandled_input(key):
         raise urwid.ExitMainLoop()
 
 def refresh(_loop,_data):
-    eventLines_list  = loadEventLinesFromFile(eventFileName)    
+    #eventLines_list  = loadEventLinesFromFile(eventFileName)    
+    eventLines_list  = loadEventLinesFromMysql()
     columnHeaders   = ['DateTime','User name','Text']
     columnWidth     = [20,15,0]
     outputList      = formatListToOutput(eventLines_list,columnHeaders,columnWidth)
@@ -44,6 +47,21 @@ def loadEventLinesFromFile( fileName ):
             eventLines_list.append(computer)
     return eventLines_list
 
+def loadEventLinesFromMysql():
+    eventLines_list = []
+    cnx = mysql.connector.connect(user='webLog', database='webLogSql')
+    cursor = cnx.cursor()
+
+    query = ("SELECT LogDate,LogType,LogText FROM WebLogTable")
+    cursor.execute(query)
+
+    for row in cursor:
+        line = EventLines(DateTime=row[0].strftime('%d-%m-%Y %H:%M:%S'),
+                          SenderName=row[1],
+                          EventText=row[2])
+        eventLines_list.append(line)
+    return eventLines_list
+
 def formatListToOutput(inputList,columnHeaders,columnWidth):
     outputList = []
     
@@ -55,9 +73,33 @@ def formatListToOutput(inputList,columnHeaders,columnWidth):
     inputList       = out_functions.wordWrapColumn(inputList,columnWidth,2)
     outputList      = out_functions.getLastLines(inputList,outputLineNums,True)
     outputList      = out_functions.addEOL(outputList)
+    outputList      = setColorsOnLines(outputList)
     
     return outputList
 
+def setColorsOnLines(inputList):
+    red_bg       = urwid.AttrSpec('default', 'dark red')
+    green_bg     = urwid.AttrSpec('default', 'dark green')
+    yellow_bg    = urwid.AttrSpec('black', 'yellow')
+    outputList   = []
+    lineDateTime = dt.datetime(2000, 1, 1, 12, 00, 00)
+    for line in inputList:
+        if(line[0].strip() != ""):
+            lineDateTime    = datetime.strptime(line[0],'%d-%m-%Y %H:%M:%S ')
+        today           = dt.date.today()
+        thisWeek        = dt.date.today()-dt.timedelta(days=7)
+        
+        if(lineDateTime.date() == today):
+            newLine = (green_bg,line)
+        elif(lineDateTime.date() > thisWeek):
+            newLine = (yellow_bg,line)
+        else:
+            newLine = line[::]
+
+        outputList.append(newLine)
+        
+    return outputList
+    
 def makeHeaderTxt():
     screen_cols = monitor_func.get_screen_cols()
 
@@ -81,7 +123,8 @@ def makePalette():
         ]    
     return palette
     
-eventLines_list  = loadEventLinesFromFile(eventFileName)    
+#eventLines_list  = loadEventLinesFromFile(eventFileName)    
+eventLines_list  = loadEventLinesFromMysql()
 
 columnHeaders   = ['DateTime','Sender name','Text']
 columnWidth     = [20,15,0]

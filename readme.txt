@@ -1,28 +1,24 @@
 Planned functionality
 
 General:
-
+    Refractor out_compstats.py
+    
 Computer Status:
-    Change source of data from csv files to SQL.
-        Find out what SQL database to use for data.
-        Test Create database
-        Test Write to SQL
-        Test Read from SQL
     
 Changlog.
 
 1.00     : Define namedtuple for ComputerStatus data (CompStats)
                 Fields in namedtuple are:
-                    STR         ComputerName
-                    STR         ComputerDescription
-                    STR         ComputerOS
-                    STR         Location
-                    STR         IPInternal
-                    STR         IPExternal
-                    DateTime    LastOnlineDateTime
-                    INT         UpdateIntervalSec
-                    INT         CPUUtilization
-                    INT         DiskUtilization
+                    STR     60      ComputerName
+                    STR     250     ComputerDescription
+                    STR     60      ComputerOS
+                    STR     60      Location
+                    STR     30      IPInternal
+                    STR     30      IPExternal
+                    DateTime        LastOnlineDateTime
+                    INT             UpdateIntervalSec
+                    INT             CPUUtilization
+                    INT             DiskUtilization
             Write compstats.csv file with test data.
             Read ComputerStatus from csv file and print to terminal
             Make output to terminal use urwid.
@@ -63,5 +59,9 @@ Changlog.
                     Remove top lines from inputList that has no data in column x
                 Function returns
                     outputList
+            Change source of data from csv files to SQL.
+                Changed for out_compstats.py /MySQL Db firemane4:computerStatus/ComputerStatus
+                Changed for out_eventlines.py /MySQL Db firemane4:webLogSql/WebLogTable
+                
             
 THANKS TO : 

@@ -10,6 +10,7 @@ import os
 import time
 import urwid
 import logging
+import mysql.connector
 
 #logging.basicConfig(filename='out_compstats.log',level=logging.DEBUG)
 refreshTime = 10
@@ -20,7 +21,7 @@ def unhandled_input(key):
         raise urwid.ExitMainLoop()
 
 def refresh(_loop,_data):
-    computer_list    = loadCompStatsFromCsv('compstats.csv')    
+    computer_list    = loadCompStatsFromMysql()
     outputList       = printCompStats(computer_list)
     header_text      = makeHeaderTxt()
 
@@ -40,7 +41,7 @@ def loadCompStatsFromCsv( fileName ):
                                      Location=row[3], 
                                      IPInternal=row[4],
                                      IPExternal=row[5],
-                                     LastOnlineDateTime=datetime.strptime(row[6], '%d-%m-%Y %H:%M:%S'),
+                                     LastOnlineDateTime=datetime.strptime(row[0], '%d-%m-%Y %H:%M:%S'),
                                      UpdateIntervalSec=int(row[7]),
                                      CPUUtilization=int(row[8]),
                                      DiskUtilization=int(row[9]))
@@ -48,6 +49,28 @@ def loadCompStatsFromCsv( fileName ):
             rowcount+=1
     return computer_list
 
+def loadCompStatsFromMysql():
+    computer_list = []
+    cnx = mysql.connector.connect(user='compstatus', database='computerStatus')
+    cursor = cnx.cursor()
+
+    query = ("SELECT B.* FROM(select ComputerName,max(LogDate) as LogDate from ComputerStatus group by ComputerName) A INNER JOIN ComputerStatus B USING (ComputerName,LogDate) ORDER BY LogDate")
+    cursor.execute(query)
+
+    for row in cursor:
+        computer = CompStats(ComputerName=row[1],
+                             ComputerDescription=row[2],
+                             ComputerOS=row[3],
+                             Location=row[4], 
+                             IPInternal=row[5],
+                             IPExternal=row[6],
+                             LastOnlineDateTime=row[0],
+                             UpdateIntervalSec=int(row[7]),
+                             CPUUtilization=int(row[8]),
+                             DiskUtilization=int(row[9]))
+        computer_list.append(computer)
+    return computer_list
+    
 def printCompStats( computer_list):
     red_bg      = urwid.AttrSpec('default', 'dark red')
     green_bg    = urwid.AttrSpec('default', 'dark green')
@@ -135,7 +158,8 @@ def makePalette():
     return palette
     
     
-computer_list   = loadCompStatsFromCsv('compstats.csv')    
+#computer_list   = loadCompStatsFromCsv('compstats.csv')    
+computer_list   = loadCompStatsFromMysql()
 outputList      = printCompStats(computer_list)
 header_text     = makeHeaderTxt()
 palette         = makePalette()

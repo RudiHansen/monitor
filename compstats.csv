@@ -1,6 +1,6 @@
 ComputerName;ComputerDescription;ComputerOS;Location;IPInternal;IPExternal;LastOnlineDateTime;UpdateIntervalSec;CPUUtilization;DiskUtilization
-RSH-PC;Rudi Home;Windown 10;Skodsborg;192.168.0.190;;08-03-2018 21:24:28;60;91;77
-RSH-ARB;Rudi Work;Windown 10;Skodsborg;192.168.0.191;;08-03-2018 21:25:28;60;100;86
-firemane4;Rudi Server;Ubuntu 16.04;Skodsborg;192.168.0.192;;08-03-2018 21:26:28;60;46;48
-OBT-AX50-02;AX2009 Server 02;Windows Server 2008R2;Køge;192.168.1.200;;08-03-2018 21:27:28;60;34;30
-OBT-AX60-01;AX2012 Server 01;Windows Server 2008R2;Køge;192.168.1.201;;08-03-2018 21:28:28;60;86;33
+RSH-PC;Rudi Home;Windown 10;Skodsborg;192.168.0.190;;26-03-2018 08:35:19;60;29;37
+RSH-ARB;Rudi Work;Windown 10;Skodsborg;192.168.0.191;;26-03-2018 08:36:19;60;6;93
+firemane4;Rudi Server;Ubuntu 16.04;Skodsborg;192.168.0.192;;26-03-2018 08:37:19;60;59;61
+OBT-AX50-02;AX2009 Server 02;Windows Server 2008R2;Køge;192.168.1.200;;26-03-2018 08:38:19;60;75;42
+OBT-AX60-01;AX2012 Server 01;Windows Server 2008R2;Køge;192.168.1.201;;26-03-2018 08:39:19;60;14;1
