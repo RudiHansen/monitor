@@ -58,16 +58,16 @@ def loadCompStatsFromMysql():
     cursor.execute(query)
 
     for row in cursor:
-        computer = CompStats(ComputerName=row[1],
-                             ComputerDescription=row[2],
-                             ComputerOS=row[3],
-                             Location=row[4], 
-                             IPInternal=row[5],
-                             IPExternal=row[6],
-                             LastOnlineDateTime=row[0],
-                             UpdateIntervalSec=int(row[7]),
-                             CPUUtilization=int(row[8]),
-                             DiskUtilization=int(row[9]))
+        computer = CompStats(ComputerName=row[2],
+                             ComputerDescription=row[3],
+                             ComputerOS=row[4],
+                             Location=row[5], 
+                             IPInternal=row[6],
+                             IPExternal=row[7],
+                             LastOnlineDateTime=row[1],
+                             UpdateIntervalSec=int(row[8]),
+                             CPUUtilization=int(row[9]),
+                             DiskUtilization=int(row[10]))
         computer_list.append(computer)
     return computer_list
     

@@ -5,6 +5,7 @@ General:
     
 Computer Status:
     
+    
 Changlog.
 
 1.00     : Define namedtuple for ComputerStatus data (CompStats)
@@ -62,6 +63,6 @@ Changlog.
             Change source of data from csv files to SQL.
                 Changed for out_compstats.py /MySQL Db firemane4:computerStatus/ComputerStatus
                 Changed for out_eventlines.py /MySQL Db firemane4:webLogSql/WebLogTable
-                
+            Compress ComputerStatus table admin_compressComputerStatus.py                
             
 THANKS TO : 
