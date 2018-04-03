@@ -7,6 +7,7 @@ from random import randint
 import time
 import socket
 import os
+import commands
 
 def get_ip_address():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -23,8 +24,20 @@ def disk_free(path):
     return 100 - int((free/total) * 100)
 
 def cpu_utilization():
-    CPU_Pct=float(os.popen('''grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage }' ''').readline())
-    return int(CPU_Pct*100)
+    lineOutput = commands.getoutput("top -b n 2 | grep %Cpu").split("\n")
+    fieldOutput = lineOutput[1].split(" ")
+
+    if(fieldOutput[1] != ""):
+        cpuStr = fieldOutput[1]
+    elif(fieldOutput[2] != ""):
+        cpuStr = fieldOutput[2]
+    else:
+        cpuStr = ""
+        
+    cpuFloat = float(cpuStr)
+    cpuInt   = int(round(cpuFloat,2))
+
+    return cpuInt
     
 def writeComputerStatusURL(computerName, computerDescription, computerOS, location, ipInternal, ipExternal, updateIntervalSec, cpuUtilization, diskUtilization):
     url     = "http://birkelan.no-ip.org/test/writecomputerstatus.php?computername=%s&computerdescription=%s&computeros=%s&location=%s&ipinternal=%s&ipexternal=%s&updateintervalsec=%s&cpuutilization=%s&diskutilization=%s" % (computerName, computerDescription, computerOS, location, ipInternal, ipExternal, updateIntervalSec, cpuUtilization, diskUtilization)
